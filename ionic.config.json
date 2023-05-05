@@ -1,7 +1,0 @@
-{
-  "name": "FGSSR-Final",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
