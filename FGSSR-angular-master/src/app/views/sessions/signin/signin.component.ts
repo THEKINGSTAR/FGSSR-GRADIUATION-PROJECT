@@ -57,8 +57,8 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';
     this.jwtAuth.signin(signinData).subscribe(response => {
-      this.router.navigateByUrl(this.jwtAuth.return);
-      // this.router.navigate(['/dashboard']);
+      // this.router.navigateByUrl(this.jwtAuth.return);
+      this.router.navigate(['/dashboard/analytics']);
     }, err => {
       this.submitButton.disabled = false;
       this.progressBar.mode = 'determinate';
