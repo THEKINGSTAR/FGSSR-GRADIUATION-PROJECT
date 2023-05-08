@@ -6,7 +6,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
 export const rootRouterConfig: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard/analytics',
+    redirectTo: 'sessions/home-Page',
     pathMatch: 'full'
   },
   {

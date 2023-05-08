@@ -12,6 +12,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SessionsRoutes } from "./sessions.routing";
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomePageComponent } from './home-Page/home-Page.component';
+
 
 
 @NgModule({
@@ -25,6 +27,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     PerfectScrollbarModule,
     RouterModule.forChild(SessionsRoutes)
   ],
-  declarations: [SigninComponent, SignupComponent, NotFoundComponent]
+  declarations: [HomePageComponent,SigninComponent, SignupComponent, NotFoundComponent]
 })
 export class SessionsModule { }
