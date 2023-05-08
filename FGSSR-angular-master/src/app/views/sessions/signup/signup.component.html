@@ -13,6 +13,48 @@
             <mat-form-field class="full-width">
               <input
                 matInput
+                type="name"
+                name="name"
+                [formControl]="signupForm.controls['name']"
+                placeholder="Name"
+                value="">
+            </mat-form-field>
+            <small 
+              *ngIf="signupForm.controls['name'].hasError('required') && signupForm.controls['name'].touched" 
+              class="form-error-msg"> Name is required </small>
+
+              <small 
+                *ngIf="signupForm.controls['name'].hasError('email') && signupForm.controls['name'].touched" 
+                class="form-error-msg"> Name email address </small>
+          </div>
+          <div class="">
+            <mat-form-field class="full-width">
+              <input
+                maxlength="11"
+                minlength="11"
+                matInput
+                type="tel"
+                name="Mobile"
+                [formControl]="signupForm.controls['Mobile']"
+                placeholder="Mobile Number"
+                value="">
+            </mat-form-field>
+            <small 
+              *ngIf="signupForm.controls['Mobile'].hasError('required') && signupForm.controls['Mobile'].touched" 
+              class="form-error-msg">Mobile is required </small>
+
+              <small 
+                *ngIf="signupForm.controls['Mobile'].hasError('maxLength') && signupForm.controls['Mobile'].touched" 
+                class="form-error-msg"> maxLength 11 digit</small>
+                <small 
+                *ngIf="signupForm.controls['Mobile'].hasError('minlength') && signupForm.controls['Mobile'].touched" 
+                class="form-error-msg"> minLength 11 digit</small>
+          </div>
+
+          <div class="">
+            <mat-form-field class="full-width">
+              <input
+                matInput
                 type="email"
                 name="email"
                 [formControl]="signupForm.controls['email']"

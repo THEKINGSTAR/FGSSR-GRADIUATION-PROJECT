@@ -19,6 +19,8 @@ export class SignupComponent implements OnInit {
     const password = new UntypedFormControl('', Validators.required);
 
     this.signupForm = new UntypedFormGroup({
+      name: new UntypedFormControl('',[Validators.required,Validators.maxLength(50)]),
+      Mobile: new UntypedFormControl('',[Validators.required,Validators.maxLength(11),Validators.minLength(11)]),
       email: new UntypedFormControl('', [Validators.required, Validators.email]),
       password: password,
       agreed: new UntypedFormControl('', (control: UntypedFormControl) => {
