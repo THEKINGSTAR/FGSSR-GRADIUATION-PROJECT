@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HomePageComponent } from './home-Page/home-Page.component';
+import { HomePageComponent } from './home-Page.component';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;

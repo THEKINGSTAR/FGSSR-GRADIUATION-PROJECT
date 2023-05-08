@@ -14,18 +14,18 @@
               <input
                 matInput
                 type="name"
-                name="name"
-                [formControl]="signupForm.controls['name']"
+                name="username"
+                [formControl]="signupForm.controls['username']"
                 placeholder="Name"
                 value="">
             </mat-form-field>
             <small 
-              *ngIf="signupForm.controls['name'].hasError('required') && signupForm.controls['name'].touched" 
+              *ngIf="signupForm.controls['username'].hasError('required') && signupForm.controls['username'].touched" 
               class="form-error-msg"> Name is required </small>
 
               <small 
-                *ngIf="signupForm.controls['name'].hasError('email') && signupForm.controls['name'].touched" 
-                class="form-error-msg"> Name email address </small>
+                *ngIf="signupForm.controls['username'].hasError('maxLength') && signupForm.controls['username'].touched" 
+                class="form-error-msg"> MaxLength 50 </small>
           </div>
           <div class="">
             <mat-form-field class="full-width">
@@ -34,20 +34,20 @@
                 minlength="11"
                 matInput
                 type="tel"
-                name="Mobile"
-                [formControl]="signupForm.controls['Mobile']"
+                name="PhoneNumber"
+                [formControl]="signupForm.controls['PhoneNumber']"
                 placeholder="Mobile Number"
                 value="">
             </mat-form-field>
             <small 
-              *ngIf="signupForm.controls['Mobile'].hasError('required') && signupForm.controls['Mobile'].touched" 
+              *ngIf="signupForm.controls['PhoneNumber'].hasError('required') && signupForm.controls['PhoneNumber'].touched" 
               class="form-error-msg">Mobile is required </small>
 
               <small 
-                *ngIf="signupForm.controls['Mobile'].hasError('maxLength') && signupForm.controls['Mobile'].touched" 
+                *ngIf="signupForm.controls['PhoneNumber'].hasError('maxLength') && signupForm.controls['PhoneNumber'].touched" 
                 class="form-error-msg"> maxLength 11 digit</small>
                 <small 
-                *ngIf="signupForm.controls['Mobile'].hasError('minlength') && signupForm.controls['Mobile'].touched" 
+                *ngIf="signupForm.controls['PhoneNumber'].hasError('minlength') && signupForm.controls['PhoneNumber'].touched" 
                 class="form-error-msg"> minLength 11 digit</small>
           </div>
 
@@ -56,18 +56,18 @@
               <input
                 matInput
                 type="email"
-                name="email"
-                [formControl]="signupForm.controls['email']"
+                name="Email"
+                [formControl]="signupForm.controls['Email']"
                 placeholder="Your Email"
                 value="">
             </mat-form-field>
             <small 
-              *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" 
+              *ngIf="signupForm.controls['Email'].hasError('required') && signupForm.controls['Email'].touched" 
               class="form-error-msg"> Email is required </small>
 
               <small 
-                *ngIf="signupForm.controls['email'].hasError('email') && signupForm.controls['email'].touched" 
-                class="form-error-msg"> Invaild email address </small>
+                *ngIf="signupForm.controls['Email'].hasError('email') && signupForm.controls['Email'].touched" 
+                class="form-error-msg"> Invaild Email address </small>
           </div>
 
           <div class="">

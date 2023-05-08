@@ -24,6 +24,7 @@ import { ErrorHandlerService } from './shared/services/error-handler.service';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { AuthService } from './shared/services/auth.service';
 import { JwtModule } from '@auth0/angular-jwt';
+import { HomeService } from './services/home.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
