@@ -50,6 +50,8 @@ export const rootRouterConfig: Routes = [
         path: 'communication',
         loadChildren: () => import('./views/communication/communication.module').then(m => m.CommunicationModule)
       },
+     
+      
     ]
   },
   {

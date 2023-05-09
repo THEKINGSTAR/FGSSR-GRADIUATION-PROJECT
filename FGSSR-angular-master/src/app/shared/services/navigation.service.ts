@@ -80,6 +80,12 @@ export class NavigationService {
       icon: 'grain',
     },
     {
+      name: 'Skills',
+      state: 'communication/Skills',
+      type: 'link',
+      icon: 'grain',
+    },
+    {
       name: 'PAGES',
       type: 'separator'
     },

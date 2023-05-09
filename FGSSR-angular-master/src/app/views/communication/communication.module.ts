@@ -10,6 +10,7 @@ import { CommunicationComponent } from "./communication/communication.component"
 import { CommunicationRoutes } from "./communication.routing";
 import { FormsModule } from "@angular/forms";
 import { ChatappComponent } from './chatapp/chatapp.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { ChatappComponent } from './chatapp/chatapp.component';
     FormsModule,
     RouterModule.forChild(CommunicationRoutes)
   ],
-  declarations: [CommunicationComponent, ChatappComponent],
+  declarations: [CommunicationComponent, ChatappComponent, SkillsComponent],
   exports: []
 })
 export class CommunicationModule {}
