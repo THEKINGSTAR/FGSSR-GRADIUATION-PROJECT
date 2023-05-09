@@ -19,3 +19,5 @@ global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using API.Data.Migrations;
 global using System.Text.Json;
+global using API.SignalR;
+global using Microsoft.AspNetCore.SignalR;
