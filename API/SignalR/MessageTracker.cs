@@ -1,4 +1,4 @@
-namespace Hol.API.SignalR
+namespace API.SignalR
 {
     public class MessageTracker
     {

@@ -1,4 +1,6 @@
-namespace Hol.API.SignalR
+using API.DTOs;
+
+namespace API.SignalR
 {
     [Authorize]
     public class MessageHub : Hub
@@ -16,10 +18,10 @@ namespace Hol.API.SignalR
 
         public override async Task OnConnectedAsync()
         {
-            var usercode = Convert.ToInt32(Context.User.GetUsername());
-            var messages = await _messageRepository.GetPhoneNumberToChat(usercode);
-            await _tracker.UserConnected(usercode, Context.ConnectionId);
-            await Clients.Client(Context.ConnectionId).SendAsync("ReceiveMessageThread", messages);
+            // var usercode = Convert.ToInt32(Context.User.GetUsername());
+            // var messages = await _messageRepository.GetPhoneNumberToChat(usercode);
+            // await _tracker.UserConnected(usercode, Context.ConnectionId);
+            // await Clients.Client(Context.ConnectionId).SendAsync("ReceiveMessageThread", messages);
         }
 
         public override async Task OnDisconnectedAsync(Exception exception) => await base.OnDisconnectedAsync(exception);

@@ -1,20 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\FSSR_Project\\FGSSR_final\\API\\API.csproj": {}
+    "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj": {}
   },
   "projects": {
-    "Y:\\FSSR_Project\\FGSSR_final\\API\\API.csproj": {
+    "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\FSSR_Project\\FGSSR_final\\API\\API.csproj",
+        "projectUniqueName": "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "Y:\\FSSR_Project\\FGSSR_final\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\mahmoud.moustafait\\.nuget\\packages\\",
-        "outputPath": "Y:\\FSSR_Project\\FGSSR_final\\API\\obj\\",
+        "projectPath": "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\New2\\FGSSR_final\\API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mahmoud.moustafait\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +29,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,6 +60,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
