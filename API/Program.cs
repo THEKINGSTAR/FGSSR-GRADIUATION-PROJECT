@@ -23,8 +23,14 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllers();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapControllerRoute("Default", "{controller=Fallback}/{action=Index}/{id?}");
+app.MapFallbackToController("Index", "Fallback");
+app.MapHub<MessageHub>("hubs/whatsApp");
+app.UseHttpsRedirection();
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
