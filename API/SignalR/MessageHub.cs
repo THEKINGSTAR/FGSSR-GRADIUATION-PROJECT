@@ -1,5 +1,3 @@
-using API.DTOs;
-
 namespace API.SignalR
 {
     [Authorize]
@@ -18,8 +16,8 @@ namespace API.SignalR
 
         public override async Task OnConnectedAsync()
         {
-            // var usercode = Convert.ToInt32(Context.User.GetUsername());
-            // var messages = await _messageRepository.GetPhoneNumberToChat(usercode);
+            var usercode = Convert.ToInt32(Context.User.GetUsername());
+            // // var messages = await _messageRepository.GetPhoneNumberToChat(usercode);
             // await _tracker.UserConnected(usercode, Context.ConnectionId);
             // await Clients.Client(Context.ConnectionId).SendAsync("ReceiveMessageThread", messages);
         }

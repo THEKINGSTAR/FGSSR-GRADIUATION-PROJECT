@@ -13,6 +13,8 @@ namespace API.Extinsions
             services.AddScoped<IUserLogin, UserLogin>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenaricRepository<>));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddSingleton<MessageTracker>();
+            services.AddSignalR();
             return services;
         }
     }
