@@ -11,9 +11,12 @@ import { CommunicationRoutes } from "./communication.routing";
 import { FormsModule } from "@angular/forms";
 import { ChatappComponent } from './chatapp/chatapp.component';
 import { SkillsComponent } from './skills/skills.component';
+import {  ReactiveFormsModule } from '@angular/forms';
+import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 
 @NgModule({
   imports: [
+    NgMultiSelectDropDownModule.forRoot(),
     CommonModule,
     SharedMaterialModule,
     FlexLayoutModule,
@@ -23,6 +26,7 @@ import { SkillsComponent } from './skills/skills.component';
     }),
     SharedPipesModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(CommunicationRoutes)
   ],
   declarations: [CommunicationComponent, ChatappComponent, SkillsComponent],

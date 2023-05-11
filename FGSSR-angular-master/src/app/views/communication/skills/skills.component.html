@@ -1,1 +1,25 @@
-<p>skills works!</p>
+<mat-card >
+    Add Your Skills
+</mat-card>
+<mat-card style="height:400px; " >
+    <div style="width:60%">
+        <form [formGroup]="dropDownForm">
+          <ng-multiselect-dropdown
+             [settings]="dropdownSettings"
+             [data]="dropdownList"
+             formControlName="myItems"
+             (onSelect)="onItemSelect($event)"
+             (onDeSelect)="onItemDeSelect($event)">
+          </ng-multiselect-dropdown>
+        </form>
+      </div>
+     
+    </mat-card>
+      <mat-card>
+        <button class="submitclass" mat-flat-button *ngIf="isButtonVisible" (click)="submitAT()"  >Submit</button>
+      </mat-card>
+      
+      <mat-card style="height:400px; "  *ngIf="isButtonVisibleAI">
+        <mat-title-card> Recommendations Project</mat-title-card>
+    </mat-card>
+   

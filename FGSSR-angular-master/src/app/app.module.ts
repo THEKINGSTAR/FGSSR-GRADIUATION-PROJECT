@@ -8,8 +8,9 @@ import {
   PERFECT_SCROLLBAR_CONFIG, 
   PerfectScrollbarConfigInterface
 } from './shared/components/perfect-scrollbar';
+import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/inmemory-db/inmemory-db.service';
 
@@ -39,6 +40,10 @@ export function tokenGetterr(): any {
 }
 @NgModule({
   imports: [
+   
+    FormsModule,
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
