@@ -18,6 +18,6 @@ export const CommunicationRoutes: Routes = [
   {
     path: "Skills",
     component: SkillsComponent,
-    data: { title: 'Skills', breadcrumb: 'Skill'}
+    data: { title: 'Skills', breadcrumb: 'Skills'}
   }
 ];

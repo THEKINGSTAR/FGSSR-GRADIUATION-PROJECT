@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj": {}
+    "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj": {
+    "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj",
+        "projectUniqueName": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj",
+        "projectPath": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\New2\\FGSSR_final\\API\\obj\\",
+        "outputPath": "D:\\Project\\New3\\FGSSR_final\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

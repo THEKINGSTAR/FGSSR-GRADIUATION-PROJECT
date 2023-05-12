@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hL4/ywn3hbsFWHnOJS83PbhImrGclQoGBuO8jTQmBpMUIOIbViKpZeWtgRPPY31eHHcssQkf2QpMquYm2J0GrQ==",
+  "dgSpecHash": "oWXNTG8tlRiKilCbW4q/uxXJgA2ESWvEXKd+L0UXqHlBwwcJAmAK3Wqs/9Vfr8eR9cQXRcZPKkxfpPdpG1uVhQ==",
   "success": true,
-  "projectFilePath": "D:\\Project\\New2\\FGSSR_final\\API\\API.csproj",
+  "projectFilePath": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

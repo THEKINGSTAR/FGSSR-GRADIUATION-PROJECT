@@ -17,13 +17,15 @@ export const rootRouterConfig: Routes = [
         path: 'sessions',
         loadChildren: () => import('./views/sessions/sessions.module').then(m => m.SessionsModule),
         data: { title: 'Session'}
-      }
+      },
+      
+      
     ]
   },
   {
     path: '',
     component: AdminLayoutComponent,
-    canActivate: [AuthGuard],
+   // canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
@@ -49,7 +51,7 @@ export const rootRouterConfig: Routes = [
       {
         path: 'communication',
         loadChildren: () => import('./views/communication/communication.module').then(m => m.CommunicationModule)
-      },
+      }
      
       
     ]
