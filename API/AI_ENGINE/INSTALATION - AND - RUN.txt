@@ -1,0 +1,58 @@
+## 1 - For a Python 3 virtual environment type -
+>>> python3 -m venv myenv
+
+## If you only have Python 3 on your machine do the following
+>>> virtualenv myenv
+
+This will also work,
+>>> python -m venv myenv
+
+
+#2 - Install Flask: Install Flask within your virtual environment using pip:
+
+python -m pip install flask
+
+pip install flask
+
+#############################################################
+INSTALL THE LIPRARY USED TO RUN THE AI-ENGINE
+
+pip install pandas
+pip install torch
+pip install scikit-learn
+pip install streamlit  #####!!!!NOT NECESSARILY!!!!!!####
+pip install  google-api-python-client
+
+##############################################################
+""""""""""""""
+This will create a directory myenv along with directories inside it containing a copy of the Python interpreter, the standard library, and various supporting files.
+
+A virtual Python environment has a similar directory structure to a global Python installation. The bin directory contains executables for the virtual environment, the include directory is linked to the global Python installation header files, the lib directory is a copy of the global Python installation libraries and where packages for the virtual environment are installed, and the shared directory is used to place shared Python packages.
+
+The interesting thing here is that these environments  won't have any existing Python package or module of your computer, you can verify it by navigating into myenv>Lib>site-packages
+
+You will only find the essential tools such as pip, easy install and setup tool, later this directory will hold all the packages and modules you will install in this particular environment and remain isolated from other environments.
+
+To add modules and packages in our Environment, we need to activate it first.
+"""""""""""""""
+
+### On Windows, run:
+>>> myenv\Scripts\activate.bat
+############################################################
+
+#### ON LINUX
+
+python3 -m venv myenv
+source myenv/bin/activate
+
+##############################
+Test your API locally: Start the Flask development server to test your API locally:
+>>>> python app.py
+
+Your API will be accessible at http://localhost:5000/api/data. Visiting this URL should return a JSON response with the message "Hello from the API!"
+
+Expose your API to the internet: To use your API in an Ionic app, you need to make it accessible from the internet. There are several options for this, including deploying your API to a cloud hosting service like Heroku or AWS, or using a tool like ngrok to create a temporary public URL for testing purposes.
+
+Integrate the API in your Ionic app: In your Ionic app, use Angular's HTTP client or a plugin like @angular/common/http to make HTTP requests to your API's endpoints. Here's an example of how to make a GET request to the /api/data endpoint:
+
+
