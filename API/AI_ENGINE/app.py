@@ -12,13 +12,15 @@ def get_data():
     return jsonify(data)
 """
 
-@app.route('/api/data', methods=['GET'])
+@app.route('/api/data1', methods=['GET'])
 def get_projects():
-    data = {'message': get_recommendations(["CSS","HTML"])}
+    data = {'message_get_recommendations': get_recommendations(["CSS","HTML"])}
     return jsonify(data)
 
+
+@app.route('/api/data2', methods=['GET'])
 def get_videos():
-    data = {'message': get_recommendations(["CSS","HTML"])}
+    data = {'message_display_learning_resources': display_learning_resources(["CSS","HTML"])}
     return jsonify(data)
 
 
