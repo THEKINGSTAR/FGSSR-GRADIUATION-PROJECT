@@ -244,3 +244,6 @@ D:\Project\New3\FGSSR_final\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
 D:\Project\New3\FGSSR_final\API\obj\Debug\net7.0\API.csproj.CopyComplete
 D:\Project\New3\FGSSR_final\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\Project\New3\FGSSR_final\API\obj\Debug\net7.0\ref\API.dll
+D:\Project\New3\FGSSR_final\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+D:\Project\New3\FGSSR_final\API\bin\Debug\net7.0\MySqlConnector.dll
+D:\Project\New3\FGSSR_final\API\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll

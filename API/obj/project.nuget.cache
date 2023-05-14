@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oWXNTG8tlRiKilCbW4q/uxXJgA2ESWvEXKd+L0UXqHlBwwcJAmAK3Wqs/9Vfr8eR9cQXRcZPKkxfpPdpG1uVhQ==",
+  "dgSpecHash": "x7N6ossScEXNa6KsdNIpKA8qNLJgk25FOi0R+Hbl7bbGVcZrsE9tBgpb9tDIZ5Gp1rJ/6qmHGe5RUaw4QVQLnA==",
   "success": true,
   "projectFilePath": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -71,7 +71,9 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

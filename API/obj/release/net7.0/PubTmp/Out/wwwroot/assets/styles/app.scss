@@ -1,0 +1,98 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$matx-angular-latest-test-primary: mat.define-palette(mat.$indigo-palette);
+$matx-angular-latest-test-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$matx-angular-latest-test-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$matx-angular-latest-test-theme: mat.define-light-theme((
+  color: (
+    primary: $matx-angular-latest-test-primary,
+    accent: $matx-angular-latest-test-accent,
+    warn: $matx-angular-latest-test-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($matx-angular-latest-test-theme);
+
+/*
+ *
+ *   MATX - Angular Material Design Admin Template
+ *
+ *
+*/
+
+// // Third pirty style files
+// // Sidebar Scroll
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+// // Flag icon
+// @import '~flag-icon-css/css/flag-icon.min.css';
+@import '~flag-icons/css/flag-icons.min.css';
+
+// // Rich Text Editor
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+
+// // Drag and Drop
+@import '~dragula/dist/dragula.css';
+
+// // Calendar
+@import '~angular-calendar/css/angular-calendar.css';
+
+// // User tour
+@import '~hopscotch/dist/css/hopscotch.min.css';
+
+// // Page loader Topbar
+@import '../../vendor/pace/pace-theme-min.css';
+
+// // Highlightjs theme
+@import '~highlight.js/styles/github.css';
+
+
+// Main Variables File
+@import "scss/variables";
+
+@import "scss/mixins/mixins";
+@import "scss/colors";
+
+@import "scss/animations";
+
+// Open _main.scss and keep files which are required for your current layout.
+@import "scss/main/main";
+
+// Angular material theme files
+@import "scss/themes/init";
+
+@import "scss/utilities/utilities";
+@import "scss/components/components";
+@import "scss/palette";
+
+
+@import "scss/page-layouts";
+
+// Open _views.scss and remove unnecessary view related files
+@import "scss/views/views";
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
