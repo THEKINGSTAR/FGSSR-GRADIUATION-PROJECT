@@ -12,10 +12,10 @@
 
   <span fxFlex></span>
   <!-- Language Switcher -->
-  <button mat-button [matMenuTriggerFor]="menu">
+  <!-- <button mat-button [matMenuTriggerFor]="menu">
     <span class="fi fi-{{currentLang.flag}} mr-8"></span>
     <span>{{currentLang.name}}</span>
-  </button>
+  </button> -->
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngFor="let lang of availableLangs" (click)="setLang(lang)">
         <span class="fi mr-8 fi-{{lang.flag}}"></span>
@@ -52,14 +52,14 @@
       <mat-icon>account_box</mat-icon>
       <span>Profile</span>
     </button>
-    <button mat-menu-item [routerLink]="['/profile/settings']">
+    <!-- <button mat-menu-item [routerLink]="['/profile/settings']">
       <mat-icon>settings</mat-icon>
       <span>Account Settings</span>
-    </button>
-    <button mat-menu-item>
+    </button> -->
+    <!-- <button mat-menu-item>
       <mat-icon>notifications_off</mat-icon>
       <span>Disable alerts</span>
-    </button>
+    </button> -->
     <button mat-menu-item (click)="jwtAuth.signout()">
       <mat-icon>exit_to_app</mat-icon>
       <span>{{ "SIGNOUT" | translate }}</span>

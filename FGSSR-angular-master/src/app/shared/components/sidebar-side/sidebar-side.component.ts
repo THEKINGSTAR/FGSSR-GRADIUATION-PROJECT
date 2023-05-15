@@ -4,7 +4,9 @@ import { ThemeService } from "../../services/theme.service";
 import { Subscription } from "rxjs";
 import { ILayoutConf, LayoutService } from "app/shared/services/layout.service";
 import { JwtAuthService } from "app/shared/services/auth/jwt-auth.service";
+import { SigninComponent } from "app/views/sessions/signin/signin.component";
 
+import { HomeService } from 'app/services/home.service';
 @Component({
   selector: "app-sidebar-side",
   templateUrl: "./sidebar-side.component.html"

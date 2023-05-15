@@ -16,7 +16,7 @@ import { AuthService } from './shared/services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  appTitle = '[FGssr Project';
+  appTitle = 'FGSSR Project';
   pageTitle = '';
   jwtHelper = new JwtHelperService();
   constructor(
