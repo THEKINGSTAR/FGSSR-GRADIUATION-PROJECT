@@ -58,6 +58,12 @@ export class NavigationService {
       icon: 'grain',
     },
     {
+      name: 'Students',
+      state: 'communication/Students',
+      type: 'link',
+      icon: 'grain',
+    },
+    {
       name: 'FORMS',
       type: 'separator'
     },

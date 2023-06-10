@@ -20,7 +20,7 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
    
     this.dropdownList = [
-      {	item_id:	1	,	item_text: '	HTML	 ' },
+      {	item_id:	1	,	item_text: 'HTML' },
       {	item_id:	2	,	item_text: '	CSS	 ' },
       {	item_id:	3	,	item_text: '	JavaScript	 ' },
       {	item_id:	4	,	item_text: '	PHP or Python	 ' },
@@ -132,13 +132,10 @@ export class SkillsComponent implements OnInit {
       {	item_id:	110	,	item_text: '	Integration with messaging platforms (e.g. Facebook Messenger	 ' },
       {	item_id:	111	,	item_text: '	Slack)	 ' },
       {	item_id:	112	,	item_text: '	Integration with Google Maps API	 ' },
-      {	item_id:	113	,	item_text: '	Integration with Job Search APIs (e.g. Indeed	 ' },
-      {	item_id:	114	,	item_text: '	Glassdoor)	 ' },
+      {	item_id:	113	,	item_text: '	Integration with Job Search APIs (e.g. Indeed	Glassdoor) ' },
       {	item_id:	115	,	item_text: '	MongoDB or PostgreSQL	 ' },
-      {	item_id:	116	,	item_text: '	Integration with Music APIs (e.g. Spotify	 ' },
-      {	item_id:	117	,	item_text: '	Apple Music)	 ' },
-      {	item_id:	118	,	item_text: '	Integration with Weather APIs (e.g. OpenWeatherMap	 ' },
-      {	item_id:	119	,	item_text: '	AccuWeather)	 ' },
+      {	item_id:	116	,	item_text: '	Integration with Music APIs (e.g. Spotify	Apple Music) ' },
+      {	item_id:	118	,	item_text: '	Integration with Weather APIs (e.g. OpenWeatherMap AccuWeather)	 ' },
       {	item_id:	120	,	item_text: '	NLTK	 ' },
       {	item_id:	121	,	item_text: '	Dialogflow or IBM Watson	 ' },
       {	item_id:	122	,	item_text: '	Fitness Tracking API Integration	 ' }

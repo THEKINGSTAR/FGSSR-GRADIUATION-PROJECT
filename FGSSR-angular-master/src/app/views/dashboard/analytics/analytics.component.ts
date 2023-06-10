@@ -8,6 +8,7 @@ import { matxAnimations } from "app/shared/animations/matx-animations";
 import { ThemeService } from "app/shared/services/theme.service";
 import tinyColor from "tinycolor2";
 import PerfectScrollbar from "perfect-scrollbar";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-analytics",
@@ -118,7 +119,7 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = ["name", "price", "available", "action"];
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService,public route: Router) {}
 
   ngAfterViewInit() {}
   ngOnInit() {
@@ -129,7 +130,10 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
     this.initDailyTrafficChartBar(this.themeService.activatedTheme);
     this.initDoughNutPieOptions(this.themeService.activatedTheme);
   }
-
+ 
+  skillsLink(){
+    this.route.navigate(['/communication/Skills']);
+  }
   initDoughNutPieOptions(theme) {
     this.doughNutPieOptions = {
       backgroundColor: "transparent",

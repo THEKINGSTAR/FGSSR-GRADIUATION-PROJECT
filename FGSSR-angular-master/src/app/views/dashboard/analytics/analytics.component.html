@@ -1,7 +1,12 @@
-<div class="mat-bg-primary m-12 px-24 py-24 rounded">
-  <h5 class="text-white text-16 mb-16 font-weight-bold">Last 12 Months Sales</h5>
-  <div height="180" echarts class="chart m-0" [options]="dailyTrafficChartBar"></div>
-</div>
+<mat-grid-list cols="3" rowHeight="3:1" >
+  <mat-grid-tile style="background: rgb(173, 186, 230);  cursor: pointer; ">Add Project</mat-grid-tile>
+  <mat-grid-tile style="background: rgba(144, 238, 144, 0.89);  cursor: pointer;">Add Memebr</mat-grid-tile>
+  <mat-grid-tile style="background: lightpink;  cursor: pointer;">Add Task</mat-grid-tile>
+  <mat-grid-tile style="background: rgba(255, 0, 0, 0.637);  cursor: pointer;">Add Time</mat-grid-tile>
+  <mat-grid-tile style="background: rgb(29, 110, 182);  cursor: pointer;" >Add file</mat-grid-tile>
+  <mat-grid-tile style="background: rgba(128, 0, 128, 0.849);  cursor: pointer;" (click)="skillsLink()" >Add Skills</mat-grid-tile>
+</mat-grid-list>
+
 <div class="mt--72">
   <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.sm="70" fxFlex.gt-sm="70">

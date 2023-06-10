@@ -3,6 +3,7 @@ import { Routes } from "@angular/router";
 import { CommunicationComponent } from "./communication/communication.component";
 import { ChatappComponent } from "./chatapp/chatapp.component";
 import { SkillsComponent } from "./skills/skills.component";
+import { StudentsComponent } from "./students/students.component";
 
 export const CommunicationRoutes: Routes = [
   {
@@ -19,5 +20,10 @@ export const CommunicationRoutes: Routes = [
     path: "Skills",
     component: SkillsComponent,
     data: { title: 'Skills', breadcrumb: 'Skills'}
-  }
+  },
+  {
+    path: "Students",
+    component: StudentsComponent,
+    data: { title: 'Students', breadcrumb: 'Students'}
+  },
 ];

@@ -13,7 +13,9 @@ import { ChatappComponent } from './chatapp/chatapp.component';
 import { SkillsComponent } from './skills/skills.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
-
+import { StudentsComponent } from './students/students.component';
+import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 @NgModule({
   imports: [
     NgMultiSelectDropDownModule.forRoot(),
@@ -21,6 +23,9 @@ import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
     SharedMaterialModule,
     FlexLayoutModule,
     NgChartsModule,
+    MatTableModule,
+    MatSortModule,
+    
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     }),
@@ -29,7 +34,7 @@ import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
     ReactiveFormsModule,
     RouterModule.forChild(CommunicationRoutes)
   ],
-  declarations: [CommunicationComponent, ChatappComponent, SkillsComponent],
+  declarations: [CommunicationComponent, ChatappComponent, SkillsComponent, StudentsComponent],
   exports: []
 })
 export class CommunicationModule {}
