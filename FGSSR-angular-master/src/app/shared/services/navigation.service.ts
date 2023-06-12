@@ -67,12 +67,12 @@ export class NavigationService {
       name: 'FORMS',
       type: 'separator'
     },
-   /* {
+   {
       name: 'BASIC',
       state: 'forms/basic',
       type: 'link',
       icon: 'description',
-    },*/
+    },
     {
       name: 'EDITOR',
       state: 'forms/editor',
@@ -85,14 +85,14 @@ export class NavigationService {
       type: 'link',
       icon: 'upload',
     },
-   /* {
+    {
       name: 'WIZARD',
       state: 'forms/wizard',
       type: 'link',
       icon: 'grain',
-    },*/
+    },
     
- /*   {
+    {
       name: 'PAGES',
       type: 'separator'
     },
@@ -131,7 +131,7 @@ export class NavigationService {
       tooltip: 'Documentation',
       icon: 'library_books',
       state: 'http://demos.ui-lib.com/matx-doc/'
-    }*/
+    }
   ];
 
   // Icon menu TITLE at the very top of navigation.
