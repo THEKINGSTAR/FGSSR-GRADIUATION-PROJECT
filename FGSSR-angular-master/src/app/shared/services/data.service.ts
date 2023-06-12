@@ -12,6 +12,6 @@ export class DataService {
    }
 
   getUserDataForWizard(): any{
-    return this.http.get(`${this.baseUrl}\`)
+    return this.http.get(`${this.baseUrl}/`)
   }
 }

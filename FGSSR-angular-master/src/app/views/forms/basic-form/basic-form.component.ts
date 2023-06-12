@@ -15,6 +15,7 @@ export class BasicFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.getUserData()
     let password = new UntypedFormControl('', Validators.required);
     let confirmPassword = new UntypedFormControl('');
 
@@ -47,6 +48,8 @@ export class BasicFormComponent implements OnInit {
   }
 
   getUserData():any {
-this.userData.
-  }
+this.userData.getUserDataForWizard().subscribe((res:any) => {
+  this.userData = res
+  });
+}
 }
