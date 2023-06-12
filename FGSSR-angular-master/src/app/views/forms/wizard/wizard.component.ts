@@ -9,7 +9,7 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 export class WizardComponent implements OnInit {
   firstFormGroup: UntypedFormGroup;
   secondFormGroup: UntypedFormGroup;
-
+  ThirdFormGroup: UntypedFormGroup;
   constructor(private fb: UntypedFormBuilder) { }
 
   ngOnInit() {
@@ -19,10 +19,15 @@ export class WizardComponent implements OnInit {
     this.secondFormGroup = this.fb.group({
       secondCtrl: ['', Validators.required]
     });
+    this.ThirdFormGroup = this.fb.group({
+      ThirdCtrl: ['', Validators.required]
+    });
   }
   
   submit() {
+    // Add your API
     console.log(this.firstFormGroup.value);
+    console.log(this.secondFormGroup.value);
     console.log(this.secondFormGroup.value);
   }
 }
