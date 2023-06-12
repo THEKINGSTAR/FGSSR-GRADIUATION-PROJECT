@@ -17,6 +17,8 @@ pip install flask
 #############################################################
 INSTALL THE LIPRARY USED TO RUN THE AI-ENGINE
 
+python -m 
+
 pip install pandas
 pip install torch
 pip install scikit-learn
@@ -49,10 +51,34 @@ source myenv/bin/activate
 Test your API locally: Start the Flask development server to test your API locally:
 >>>> python app.py
 
+
+#######################################################################################################################################################
+#########################################################   STATIC - RUN     ##########################################################################
+#########################################################  FOR TESTING ONLY  ##########################################################################
+#######################################################################################################################################################
 Your API will be accessible at http://localhost:5000/api/data. Visiting this URL should return a JSON response with the message "Hello from the API!"
 
-Expose your API to the internet: To use your API in an Ionic app, you need to make it accessible from the internet. There are several options for this, including deploying your API to a cloud hosting service like Heroku or AWS, or using a tool like ngrok to create a temporary public URL for testing purposes.
+REMOVE (input_data) AND INPUT YOUR DATA AS ["","","",...] LIKE::["CSS","HTML","SQL"] IN THE DESIRE FUNCTION TO CHECK THE CONNECTION AND RESPONSE 
+get_recommendations(input_data)
+OR
+display_learning_resources(input_data)
+Expose your API to the internet: To use your API in an Ionic app, you need to make it accessible from the internet. 
+There are several options for this, including deploying your API to a cloud hosting service like Heroku or AWS, 
+or using a tool like ngrok to create a temporary public URL for testing purposes.
 
-Integrate the API in your Ionic app: In your Ionic app, use Angular's HTTP client or a plugin like @angular/common/http to make HTTP requests to your API's endpoints. Here's an example of how to make a GET request to the /api/data endpoint:
+Integrate the API in your Ionic app: In your Ionic app,
+ use Angular's HTTP client or a plugin like @angular/common/http to make HTTP requests to your API's endpoints. 
+ Here's an example of how to make a GET request to the /api/data endpoint:
 
+########################################################################################################################################################
+########################################################      DYNAMICALLY  #############################################################################
+########################################################      FOR ACTUAL WORK  #########################################################################
+########################################################################################################################################################
+BY SENDING POST TO THE FUNCTION AND RETRIVE THE RESULT FROM IT
+USING POST METHOD
 
+http://localhost:5000/api/data1
+
+http://localhost:5000/api/data2
+
+########################################################################################################################################################
