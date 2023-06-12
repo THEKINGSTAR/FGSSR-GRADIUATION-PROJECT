@@ -10,6 +10,7 @@ export class BasicFormComponent implements OnInit {
   formData = {}
   console = console;
   basicForm: UntypedFormGroup;
+  userData:any;
 
   constructor() { }
 
@@ -43,5 +44,9 @@ export class BasicFormComponent implements OnInit {
         return null;
       })
     })
+  }
+
+  getUserData():any {
+this.userData.
   }
 }

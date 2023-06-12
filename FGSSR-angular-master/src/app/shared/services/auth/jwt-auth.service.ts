@@ -59,6 +59,8 @@ export class JwtAuthService {
         })
       );
 
+      
+
     // FOLLOWING CODE SENDS SIGNIN REQUEST TO SERVER
 
     // this.signingIn = true;
@@ -74,7 +76,20 @@ export class JwtAuthService {
     //     })
     //   );
   }
-
+  public register(rissterData) {
+    return this.http.post(this.baseUrl + 'Auth/register', rissterData)
+      .pipe(
+        delay(1000),
+        map((res: any) => {
+          this.setUserAndToken(res.token, res.user, !!res);
+          this.signingIn = false;
+          return res;
+        }),
+        catchError((error) => {
+          return throwError(error);
+        })
+      );  
+  }
   /*
     checkTokenIsValid is called inside constructor of
     shared/components/layouts/admin-layout/admin-layout.component.ts

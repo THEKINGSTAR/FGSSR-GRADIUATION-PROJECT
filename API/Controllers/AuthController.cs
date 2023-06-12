@@ -14,10 +14,10 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
-            if (await UserExist(registerDto.username.ToLower()))
-                return BadRequest("User is token!!");
-            if (await EmailExist(registerDto.Email.ToLower()))
-                return BadRequest("Email is token!!");
+            if (await UserExist(registerDto.username.ToLower())) { return BadRequest("User is token!!"); }
+
+            if (await EmailExist(registerDto.Email.ToLower())) { return BadRequest("Email is token!!"); }
+
             using var hmac = new HMACSHA512();
             var user = new User
             {
@@ -31,7 +31,7 @@ namespace API.Controllers
             await _context.SaveChangesAsync();
             return new UserDto
             {
-                UserName = user.UserName,
+                user = user.UserName,
                 Token = _token.CreateToken(user)
             };
         }
@@ -50,14 +50,18 @@ namespace API.Controllers
             }
             return new UserDto
             {
-                UserName = user.UserName,
+                user = user.UserName,
                 Token = _token.CreateToken(user)
             };
         }
 
         private async Task<bool> UserExist(string username)
         {
-            return await _context.users.AnyAsync(x => x.UserName == username.ToLower());
+            if (await _context.users.AnyAsync(x => x.UserName == username))
+            {
+                return true;
+            }
+            return false;
         }
         private async Task<bool> EmailExist(string Email)
         {

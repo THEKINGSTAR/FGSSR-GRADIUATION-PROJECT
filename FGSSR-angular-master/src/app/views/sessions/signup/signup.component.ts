@@ -5,6 +5,7 @@ import { Validators, UntypedFormGroup, UntypedFormControl } from '@angular/forms
 import {HttpClient } from '@angular/common/http';
 import { HomeService } from 'app/services/home.service';
 import { Router } from '@angular/router';
+import { JwtAuthService } from 'app/shared/services/auth/jwt-auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -18,8 +19,8 @@ export class SignupComponent implements OnInit {
   @ViewChild(MatButton) submitButton: MatButton;
 
   Studentdata={name:'',Mobile:'',Email:'',password:''};
-  signupForm: UntypedFormGroup
-  constructor( private http: HttpClient,public student:HomeService,public route: Router) {}
+  signupForm: UntypedFormGroup;
+  constructor( private http: HttpClient,public auth: JwtAuthService,public route: Router) {}
 
   ngOnInit() {
     const password = new UntypedFormControl('', Validators.required);
@@ -42,19 +43,16 @@ export class SignupComponent implements OnInit {
   signup() {
    
     const signupData = this.signupForm.value;
-    console.log(signupData);
-
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';
     var here=this;
-this.student.addStudent(signupData).subscribe(function(d:any){
-console.log(d);
-if(d!=null){
-  if(d.Status=='400'){
-    alert('This Email or user name is already registered  ');
+this.auth.register(signupData).subscribe(function(res:any){
+  console.log(res);
+if(res!=null){
+  if(res.Status=='400'){
+    alert('This Email or user name is already registered');
   }
   else {
-    console.log(here.route)
     here.route.navigate(['/dashboard/analytics']);
      
   }

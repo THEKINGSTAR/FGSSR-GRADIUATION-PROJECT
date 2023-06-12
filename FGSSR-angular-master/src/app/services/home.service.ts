@@ -24,14 +24,11 @@ export class HomeService {
   httpHeader = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-addStudent(Student: any): Observable<any> {
-  return this.http.post<any>(this.baseUrl + 'Auth/register', Student, this.httpHeader)
-    .pipe(
-      tap(Student => console.log('Student fetched!')),
-        catchError(this.handleError<Student[]>('Get student', []))
-    );
-    
-}
+
+
+addStudent(student: any): Observable<any> {
+  return this.http.post(this.baseUrl + 'Auth/register', student)
+    }
 
 
  
@@ -40,14 +37,14 @@ getStudent(id): Observable<Student[]> {
   var me=this ;
   return this.http.get<Student[]>('api-goes-here/' + id)
     .pipe(
-      tap(_ => console.log(`Student fetched: ${id}`)),
+      // tap(_ => console.log(`Student fetched: ${id}`)),
       catchError(me.handleError<Student[]>(`Get student id=${id}`))
     );
 }
 private handleError<T>(operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
-    console.error(error);
-    console.log(`${operation} failed: ${error.message}`);
+    // console.error(error);
+    // console.log(`${operation} failed: ${error.message}`);
     return of(result as T);
   };
 }
