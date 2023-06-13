@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
 import { LocalStoreService } from "../local-store.service";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router, ActivatedRoute } from "@angular/router";
 import { map, catchError, delay } from "rxjs/operators";
 import { User } from "../../models/user.model";
-import { of, BehaviorSubject, throwError } from "rxjs";
+import { of, BehaviorSubject, throwError, ReplaySubject } from "rxjs";
 import { environment } from "environments/environment";
 import { JwtHelperService } from "@auth0/angular-jwt";
 
@@ -34,7 +34,8 @@ export class JwtAuthService {
   baseUrl = environment.apiUrl;
   JWT_TOKEN = "JWT_TOKEN";
   APP_USER = "MATX_USER";
-
+  private currentUserSource = new ReplaySubject<User | null>(1);
+  currentUser$ = this.currentUserSource.asObservable();
   constructor(
     private ls: LocalStoreService,
     private http: HttpClient,
@@ -50,9 +51,9 @@ export class JwtAuthService {
     return this.http.post(this.baseUrl + "Auth/login", signinData).pipe(
       delay(1000),
       map((res: any) => {
-        this.setUserAndToken(res.token, res.user, !!res);
+        this.setUserAndToken(res.token, res, !!res);
+        this.decodedToken = this.jwtHelper.decodeToken(res.token);
         this.signingIn = false;
-        console.log(this.user$);
         return res;
       }),
       catchError((error) => {
@@ -75,11 +76,17 @@ export class JwtAuthService {
     //     })
     //   );
   }
+
+  loadCurrentUser(usercode): any {
+    return this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode);
+  }
+
   public register(rissterData) {
     return this.http.post(this.baseUrl + "Auth/register", rissterData).pipe(
       delay(1000),
       map((res: any) => {
-        this.setUserAndToken(res.token, res.user, !!res);
+        this.setUserAndToken(res.token, res, !!res);
+        this.decodedToken = this.jwtHelper.decodeToken(res.token);
         this.signingIn = false;
         return res;
       }),
@@ -135,6 +142,7 @@ export class JwtAuthService {
   getJwtToken() {
     return this.ls.getItem(this.JWT_TOKEN);
   }
+
   getUser() {
     return this.ls.getItem(this.APP_USER);
   }
@@ -144,6 +152,7 @@ export class JwtAuthService {
     this.token = token;
     this.user = user;
     this.user$.next(user);
+    this.currentUserSource.next(user);
     this.ls.setItem(this.JWT_TOKEN, token);
     this.ls.setItem(this.APP_USER, user);
   }

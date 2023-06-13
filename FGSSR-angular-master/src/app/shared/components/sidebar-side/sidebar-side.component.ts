@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
 import { NavigationService } from "../../../shared/services/navigation.service";
 import { ThemeService } from "../../services/theme.service";
-import { Subscription } from "rxjs";
+import { BehaviorSubject, Subscription, of } from "rxjs";
 import { ILayoutConf, LayoutService } from "app/shared/services/layout.service";
 import { JwtAuthService } from "app/shared/services/auth/jwt-auth.service";
 import { SigninComponent } from "app/views/sessions/signin/signin.component";
 
 import { HomeService } from 'app/services/home.service';
+import { User } from "app/shared/models/user.model";
 @Component({
   selector: "app-sidebar-side",
   templateUrl: "./sidebar-side.component.html"
@@ -17,6 +18,7 @@ export class SidebarSideComponent implements OnInit, OnDestroy, AfterViewInit {
   public iconTypeMenuTitle: string;
   private menuItemsSub: Subscription;
   public layoutConf: ILayoutConf;
+  public user: any;
 
   constructor(
     private navService: NavigationService,

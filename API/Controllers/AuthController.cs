@@ -5,10 +5,15 @@ namespace API.Controllers
     {
         private readonly DataContext _context;
         private readonly ITokenService _token;
-        public AuthController(DataContext context, ITokenService token)
+        private readonly IUserRepository _userRepository;
+        // private readonly UserManager<User> _userManager;
+
+        public AuthController(DataContext context, ITokenService token, IUserRepository userRepository)
         {
             _context = context;
             _token = token;
+            _userRepository = userRepository;
+            // _userManager = userManager;
         }
         [AllowAnonymous]
         [HttpPost("register")]
@@ -27,12 +32,14 @@ namespace API.Controllers
                 Email = registerDto.Email,
                 PhoneNumber = registerDto.PhoneNumber
             };
+            var Code = await _userRepository.GetMaxCode();
+            user.UserCode = Code + 1;
             _context.users.Add(user);
             await _context.SaveChangesAsync();
             return new UserDto
             {
                 user = user.UserName,
-                id = user.Id,
+                id = user.UserCode,
                 Token = _token.CreateToken(user)
             };
         }
@@ -52,10 +59,24 @@ namespace API.Controllers
             return new UserDto
             {
                 user = user.UserName,
-                id = user.Id,
+                id = user.UserCode,
                 Token = _token.CreateToken(user)
             };
         }
+
+        // [Authorize]
+        // [HttpGet("account")]
+        // public async Task<ActionResult<UserDto>> GetCurrentUser()
+        // {
+        //     var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
+
+        //     return new UserDto
+        //     {
+        //         id = user.UserCode,
+        //         Token = _token.CreateToken(user),
+        //         user = user.UserName
+        //     };
+        // }
 
         private async Task<bool> UserExist(string username)
         {

@@ -24,6 +24,11 @@ namespace API.Data
             return await _context.users.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<int> GetMaxCode()
+        {
+            return await _context.users.MaxAsync(x => x.UserCode);
+        }
+
         public async Task<bool> SaveAll()
         {
             return await _context.SaveChangesAsync() > 0;

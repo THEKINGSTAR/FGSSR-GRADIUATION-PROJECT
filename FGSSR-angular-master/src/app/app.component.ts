@@ -9,6 +9,7 @@ import { UILibIconService } from './shared/services/ui-lib-icon.service';
 import { LayoutService } from './shared/services/layout.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { AuthService } from './shared/services/auth.service';
+import { JwtAuthService } from './shared/services/auth/jwt-auth.service';
 
 @Component({
   selector: 'app-root',
@@ -26,20 +27,24 @@ export class AppComponent implements OnInit, AfterViewInit {
     private routePartsService: RoutePartsService,
     private iconService: UILibIconService,
     private layoutService: LayoutService,
-    private authService: AuthService
+    private authService: JwtAuthService
   ) {
     iconService.init()
   }
   
   ngOnInit() {
     this.changePageTitle();
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('JWT_TOKEN');
+        // this.loadCurrentUser();
     this.authService.decodedToken = this.jwtHelper.decodeToken(token);
+        this.loadCurrentUser(this.authService.decodedToken.unique_name[0])
+        // this.user = this.authService.currentUser$.subscribe((res: any) => { 
+    //   console.log(res);
+    // });
     // this.themeService.applyMatTheme(this.layoutService.layoutConf.matTheme);
   }
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {  }
 
   changePageTitle() {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((routeChange) => {
@@ -54,6 +59,12 @@ export class AppComponent implements OnInit, AfterViewInit {
                       .reduce((partA, partI) => {return `${partA} > ${partI}`});
       this.pageTitle += ` | ${this.appTitle}`;
       this.title.setTitle(this.pageTitle);
+    });
+  }
+
+  loadCurrentUser(usercode): any { 
+    this.authService.loadCurrentUser(usercode).subscribe((res: any) => { 
+      console.log(res);
     });
   }
 }

@@ -7,5 +7,6 @@ namespace API.Interface
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveAll();
         Task<object> GetUserData(int id);
+        Task<int> GetMaxCode();
     }
 }
