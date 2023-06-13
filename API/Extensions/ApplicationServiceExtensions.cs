@@ -15,6 +15,7 @@ namespace API.Extinsions
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSingleton<MessageTracker>();
             services.AddSignalR();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }

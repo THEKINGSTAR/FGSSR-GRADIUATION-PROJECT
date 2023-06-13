@@ -28,7 +28,7 @@ export class JwtAuthService {
   decodedToken: any;
   isAuthenticated: Boolean;
   user: User = {};
-  user$ = (new BehaviorSubject<User>(this.user));
+  user$ = new BehaviorSubject<User>(this.user);
   signingIn: Boolean;
   return: string;
   baseUrl = environment.apiUrl;
@@ -41,25 +41,24 @@ export class JwtAuthService {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.route.queryParams
-      .subscribe(params => this.return = params['return'] || '/');
+    this.route.queryParams.subscribe(
+      (params) => (this.return = params["return"] || "/")
+    );
   }
 
   public signin(signinData) {
-    return this.http.post(this.baseUrl + 'Auth/login', signinData)
-      .pipe(
-        delay(1000),
-        map((res: any) => {
-          this.setUserAndToken(res.token, res.user, !!res);
-          this.signingIn = false;
-          return res;
-        }),
-        catchError((error) => {
-          return throwError(error);
-        })
-      );
-
-      
+    return this.http.post(this.baseUrl + "Auth/login", signinData).pipe(
+      delay(1000),
+      map((res: any) => {
+        this.setUserAndToken(res.token, res.user, !!res);
+        this.signingIn = false;
+        console.log(this.user$);
+        return res;
+      }),
+      catchError((error) => {
+        return throwError(error);
+      })
+    );
 
     // FOLLOWING CODE SENDS SIGNIN REQUEST TO SERVER
 
@@ -77,36 +76,34 @@ export class JwtAuthService {
     //   );
   }
   public register(rissterData) {
-    return this.http.post(this.baseUrl + 'Auth/register', rissterData)
-      .pipe(
-        delay(1000),
-        map((res: any) => {
-          this.setUserAndToken(res.token, res.user, !!res);
-          this.signingIn = false;
-          return res;
-        }),
-        catchError((error) => {
-          return throwError(error);
-        })
-      );  
+    return this.http.post(this.baseUrl + "Auth/register", rissterData).pipe(
+      delay(1000),
+      map((res: any) => {
+        this.setUserAndToken(res.token, res.user, !!res);
+        this.signingIn = false;
+        return res;
+      }),
+      catchError((error) => {
+        return throwError(error);
+      })
+    );
   }
   /*
     checkTokenIsValid is called inside constructor of
     shared/components/layouts/admin-layout/admin-layout.component.ts
   */
   public checkTokenIsValid() {
-    return of(this.user)
-      .pipe(
-        map((profile: User) => {
-          this.setUserAndToken(this.getJwtToken(), profile, true);
-          this.signingIn = false;
-          return profile;
-        }),
-        catchError((error) => {
-          return of(error);
-        })
-      );
-    
+    return of(this.user).pipe(
+      map((profile: User) => {
+        this.setUserAndToken(this.getJwtToken(), profile, true);
+        this.signingIn = false;
+        return profile;
+      }),
+      catchError((error) => {
+        return of(error);
+      })
+    );
+
     /*
       The following code get user data and jwt token is assigned to
       Request header using token.interceptor

@@ -32,6 +32,7 @@ namespace API.Controllers
             return new UserDto
             {
                 user = user.UserName,
+                id = user.Id,
                 Token = _token.CreateToken(user)
             };
         }
@@ -51,6 +52,7 @@ namespace API.Controllers
             return new UserDto
             {
                 user = user.UserName,
+                id = user.Id,
                 Token = _token.CreateToken(user)
             };
         }
