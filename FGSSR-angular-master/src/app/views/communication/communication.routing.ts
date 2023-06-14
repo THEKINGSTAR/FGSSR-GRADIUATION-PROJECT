@@ -5,6 +5,7 @@ import { ChatappComponent } from "./chatapp/chatapp.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { StudentsComponent } from "./students/students.component";
 import { TeamMemberComponent } from "./team-member/team-member.component";
+import { SourcesComponent } from "./sources/sources.component";
 
 export const CommunicationRoutes: Routes = [
   {
@@ -31,5 +32,10 @@ export const CommunicationRoutes: Routes = [
     path: "team",
     component: TeamMemberComponent,
     data: { title: "Team Member", breadcrumb: "Team Member" },
+  },
+  {
+    path: "Sources",
+    component: SourcesComponent,
+    data: { title: "Sources", breadcrumb: "Sources For Learning" },
   },
 ];

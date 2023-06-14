@@ -64,6 +64,12 @@ export class NavigationService {
       icon: "grain",
     },
     {
+      name: "Sources",
+      state: "communication/Sources",
+      type: "link",
+      icon: "grain",
+    },
+    {
       name: "Team Request",
       state: "communication/Students",
       type: "link",

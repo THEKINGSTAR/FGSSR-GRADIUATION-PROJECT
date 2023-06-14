@@ -34,22 +34,9 @@ addStudent(student: any): Observable<any> {
       return this.http.post('http://localhost:5000/api/data1', item)
         }
 
-
+        getresource(skill: any): Observable<any> {
+          return this.http.post('http://localhost:5000/api/data2', skill)
+            }
  
-// to Get ID 
-getStudent(id): Observable<Student[]> {
-  var me=this ;
-  return this.http.get<Student[]>('api-goes-here/' + id)
-    .pipe(
-      // tap(_ => console.log(`Student fetched: ${id}`)),
-      catchError(me.handleError<Student[]>(`Get student id=${id}`))
-    );
-}
-private handleError<T>(operation = 'operation', result?: T) {
-  return (error: any): Observable<T> => {
-    // console.error(error);
-    // console.log(`${operation} failed: ${error.message}`);
-    return of(result as T);
-  };
-}
+
 }

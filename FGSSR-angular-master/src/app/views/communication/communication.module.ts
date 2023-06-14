@@ -17,6 +17,12 @@ import { StudentsComponent } from "./students/students.component";
 import { MatSort, Sort, MatSortModule } from "@angular/material/sort";
 import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { TeamMemberComponent } from './team-member/team-member.component';
+import { SourcesComponent } from './sources/sources.component';
+
+import {MatInputModule} from '@angular/material/input';
+import {NgFor} from '@angular/common';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   imports: [
     NgMultiSelectDropDownModule.forRoot(),
@@ -26,6 +32,7 @@ import { TeamMemberComponent } from './team-member/team-member.component';
     NgChartsModule,
     MatTableModule,
     MatSortModule,
+    MatFormFieldModule, MatSelectModule, NgFor, MatInputModule, FormsModule,
 
     NgxEchartsModule.forRoot({
       echarts: () => import("echarts"),
@@ -41,6 +48,7 @@ import { TeamMemberComponent } from './team-member/team-member.component';
     SkillsComponent,
     StudentsComponent,
     TeamMemberComponent,
+    SourcesComponent,
   ],
   exports: [],
 })
