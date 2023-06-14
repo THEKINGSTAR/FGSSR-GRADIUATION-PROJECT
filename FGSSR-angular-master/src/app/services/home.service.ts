@@ -30,6 +30,10 @@ addStudent(student: any): Observable<any> {
   return this.http.post(this.baseUrl + 'Auth/register', student)
     }
 
+    addSkills(item: any): Observable<any> {
+      return this.http.post('http://localhost:5000/api/data1', item)
+        }
+
 
  
 // to Get ID 

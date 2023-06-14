@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { HomeService } from 'app/services/home.service';
+import { isThisHour } from 'date-fns';
+
 
 @Component({
   selector: 'app-skills',
@@ -12,10 +15,11 @@ export class SkillsComponent implements OnInit {
  isButtonVisibleAI =false;
   dropdownList = [];
   selectedItems=[];
+  posts:any ; 
   dropdownSettings:IDropdownSettings={};
   dropDownForm:FormGroup;
   
-  constructor(private fb: FormBuilder) {  }
+  constructor(private fb: FormBuilder, public service: HomeService) {  }
   
   ngOnInit(): void {
    
@@ -146,9 +150,7 @@ export class SkillsComponent implements OnInit {
       enableCheckAll: false,
       allowSearchFilter:true
     };
-    this.selectedItems = [
-     
-    ];
+   
     this.dropDownForm = this.fb.group({
       myItems: [this.selectedItems]
   });
@@ -156,15 +158,27 @@ export class SkillsComponent implements OnInit {
   }
    count =0 ;
   onItemSelect(item: any) {
-    console.log('onItemSelect', item);
-this.selectedItems=item;
+    //console.log('onItemSelect', item);
+
+
+
+this.selectedItems.push(item);
+
+console.log(this.selectedItems);
+
    this.isButtonVisible = true;
 this.count++;
-console.log(this.count);
+//console.log(this.count);
 }
 onItemDeSelect(item: any) {
   this.count--;
-  console.log('onItemDeSelectAll', item);
+  //console.log('onItemDeSelectAll', item);
+
+  var index = this.selectedItems.findIndex(i=> i.item_text == item.item_text);
+  this.selectedItems.splice(index,1);
+
+console.log(this.selectedItems);
+
   if(this.count==0){
   this.isButtonVisible = false;
 }
@@ -172,5 +186,26 @@ onItemDeSelect(item: any) {
 } 
 submitAT(){
 this.isButtonVisibleAI=true;
+
+var txt='';
+for(var i=0;i<this.selectedItems.length; i++){
+ txt+= this.selectedItems[i].item_text;
+ if(i!=this.selectedItems.length-1)
+    txt+=',';
+}
+
+console.log(txt);
+var itemArr = {
+  input:txt
+}
+
+console.log(itemArr);
+
+ this.service.addSkills(itemArr).subscribe(response => {
+  console.log(response);
+  this.posts = response.result;
+  console.log(response);
+ });
+
 }
 }
