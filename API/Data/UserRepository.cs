@@ -33,5 +33,15 @@ namespace API.Data
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<User> GetCurrentUser(int UserCode)
+        {
+            return await _context.users.FirstOrDefaultAsync(x => x.UserCode == UserCode);
+        }
+
+        public async Task<User> CheckUser(int UserCode)
+        {
+            return await _context.users.FirstOrDefaultAsync(x => x.UserCode == UserCode);
+        }
     }
 }

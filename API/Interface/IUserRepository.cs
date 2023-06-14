@@ -8,5 +8,7 @@ namespace API.Interface
         Task<bool> SaveAll();
         Task<object> GetUserData(int id);
         Task<int> GetMaxCode();
+        Task<User> GetCurrentUser(int UserCode);
+        Task<User> CheckUser(int UserCode);
     }
 }

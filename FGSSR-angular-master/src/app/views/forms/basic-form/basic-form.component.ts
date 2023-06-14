@@ -6,6 +6,7 @@ import {
 } from "@angular/forms";
 import { JwtAuthService } from "app/shared/services/auth/jwt-auth.service";
 import { DataService } from "app/shared/services/data.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-basic-form",
@@ -15,9 +16,13 @@ import { DataService } from "app/shared/services/data.service";
 export class BasicFormComponent implements OnInit {
   formData = {};
   basicForm: UntypedFormGroup;
-  userData: any;
+  // userData: any;
 
-  constructor(private user: DataService, private auth: JwtAuthService) {}
+  constructor(
+    private user: DataService,
+    private auth: JwtAuthService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit() {
     this.getUserData();
@@ -34,9 +39,9 @@ export class BasicFormComponent implements OnInit {
         Validators.required,
         Validators.email,
       ]),
-      website: new UntypedFormControl(""),
+      websit: new UntypedFormControl(""),
       date: new UntypedFormControl(),
-      cardno: new UntypedFormControl(""),
+      userCode: new UntypedFormControl(""),
       password: password,
       confirmPassword: confirmPassword,
       gender: new UntypedFormControl(""),
@@ -51,17 +56,27 @@ export class BasicFormComponent implements OnInit {
   }
 
   getUserData(): any {
-    console.log(this.auth.decodedToken.unique_name[1]);
+    // console.log(this.auth.decodedToken.unique_name[1]);
     this.user
       .getUserDataForWizard(this.auth.decodedToken.unique_name[0])
       .subscribe((res: any) => {
         this.basicForm.controls.username.setValue(res.userName);
         this.basicForm.controls.email.setValue(res.email);
-        this.basicForm.controls.website.setValue(res.website);
+        this.basicForm.controls.websit.setValue(res.websit);
+        this.basicForm.controls.userCode.setValue(
+          this.auth.decodedToken.unique_name[0]
+        );
       });
   }
 
   onSubmit(): void {
-    console.log(this.basicForm.value);
+    this.user
+      .updateUserData(
+        this.basicForm.value,
+        this.auth.decodedToken.unique_name[0]
+      )
+      .subscribe((res: any) => {
+        this.toastr.success("Data has been saved!");
+      });
   }
 }

@@ -77,8 +77,17 @@ export class JwtAuthService {
     //   );
   }
 
-  loadCurrentUser(usercode): any {
-    return this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode);
+  loadCurrentUser(usercode, token): any {
+    let headers = new HttpHeaders();
+    headers = headers.set("Authorization", `Bearer ${token}`);
+    console.log(
+      this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode, {
+        headers,
+      })
+    );
+    return this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode, {
+      headers,
+    });
   }
 
   public register(rissterData) {

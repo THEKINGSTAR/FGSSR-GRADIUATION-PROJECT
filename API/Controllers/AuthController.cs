@@ -64,19 +64,22 @@ namespace API.Controllers
             };
         }
 
-        // [Authorize]
-        // [HttpGet("account")]
-        // public async Task<ActionResult<UserDto>> GetCurrentUser()
-        // {
-        //     var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
-
-        //     return new UserDto
-        //     {
-        //         id = user.UserCode,
-        //         Token = _token.CreateToken(user),
-        //         user = user.UserName
-        //     };
-        // }
+        [AllowAnonymous]
+        [HttpGet("loadCurrentUser/{UserCode}")]
+        public async Task<ActionResult<UserDto>> GetCurrentUser(int UserCode)
+        {
+            var user = await _userRepository.GetCurrentUser(UserCode);
+            if (user == null)
+            {
+                return BadRequest();
+            }
+            return new UserDto
+            {
+                id = user.UserCode,
+                Token = _token.CreateToken(user),
+                user = user.UserName
+            };
+        }
 
         private async Task<bool> UserExist(string username)
         {

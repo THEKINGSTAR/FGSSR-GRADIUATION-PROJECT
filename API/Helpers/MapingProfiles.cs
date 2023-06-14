@@ -1,12 +1,10 @@
-
-
 namespace API.Helpers
 {
     public class MapingProfiles : Profile
     {
-        protected MapingProfiles()
+        public MapingProfiles()
         {
-            // CreateMap<Profile, >
+            CreateMap<UpdateUserDto, User>();
         }
     }
 }

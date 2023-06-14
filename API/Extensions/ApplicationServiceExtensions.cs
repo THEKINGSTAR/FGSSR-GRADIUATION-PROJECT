@@ -9,6 +9,7 @@ namespace API.Extinsions
                      {
                          options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
                      });
+
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserLogin, UserLogin>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenaricRepository<>));

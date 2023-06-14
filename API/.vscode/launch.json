@@ -24,7 +24,8 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
-            }
+            },
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Attach",
@@ -33,3 +34,5 @@
         }
     ]
 }
+
+// To allow this breakpoint to be hit: Add '"requireExactSource": false' to launch.json and restart debugging.

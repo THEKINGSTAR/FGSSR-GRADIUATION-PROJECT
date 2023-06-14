@@ -17,8 +17,8 @@
           <img src="assets/images/face-7.jpg" class="mat-elevation-z1" alt="" />
         </div>
         <div class="ml-16">
-          <span class="app-user-name mb-4" *ngIf="jwtAuth.currentUser$ | async as user">
-            Welcome {{user.user}}
+          <span class="app-user-name mb-4" *ngIf="jwtAuth.decodedToken.unique_name[0]">
+            Welcome {{ jwtAuth.decodedToken.unique_name[1] }}
           </span>
           <!-- Small buttons -->
           <div class="app-user-controls">

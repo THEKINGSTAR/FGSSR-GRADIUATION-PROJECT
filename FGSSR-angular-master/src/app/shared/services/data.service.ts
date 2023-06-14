@@ -14,4 +14,12 @@ export class DataService {
   getUserDataForWizard(id: any): any {
     return this.http.get(`${this.baseUrl}User/user/${id}`);
   }
+
+  updateUserData(data: any, usercode): any {
+    console.log(data);
+    return this.http.post(
+      `${this.baseUrl}user/updateUserData/${usercode}`,
+      data
+    );
+  }
 }

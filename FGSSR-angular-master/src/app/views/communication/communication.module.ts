@@ -9,13 +9,14 @@ import { SharedPipesModule } from "app/shared/pipes/shared-pipes.module";
 import { CommunicationComponent } from "./communication/communication.component";
 import { CommunicationRoutes } from "./communication.routing";
 import { FormsModule } from "@angular/forms";
-import { ChatappComponent } from './chatapp/chatapp.component';
-import { SkillsComponent } from './skills/skills.component';
-import {  ReactiveFormsModule } from '@angular/forms';
-import{NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
-import { StudentsComponent } from './students/students.component';
-import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { ChatappComponent } from "./chatapp/chatapp.component";
+import { SkillsComponent } from "./skills/skills.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
+import { StudentsComponent } from "./students/students.component";
+import { MatSort, Sort, MatSortModule } from "@angular/material/sort";
+import { MatTableDataSource, MatTableModule } from "@angular/material/table";
+import { TeamMemberComponent } from './team-member/team-member.component';
 @NgModule({
   imports: [
     NgMultiSelectDropDownModule.forRoot(),
@@ -25,16 +26,22 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     NgChartsModule,
     MatTableModule,
     MatSortModule,
-    
+
     NgxEchartsModule.forRoot({
-      echarts: () => import('echarts')
+      echarts: () => import("echarts"),
     }),
     SharedPipesModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(CommunicationRoutes)
+    RouterModule.forChild(CommunicationRoutes),
   ],
-  declarations: [CommunicationComponent, ChatappComponent, SkillsComponent, StudentsComponent],
-  exports: []
+  declarations: [
+    CommunicationComponent,
+    ChatappComponent,
+    SkillsComponent,
+    StudentsComponent,
+    TeamMemberComponent,
+  ],
+  exports: [],
 })
 export class CommunicationModule {}
