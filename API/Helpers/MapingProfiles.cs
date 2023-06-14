@@ -5,6 +5,7 @@ namespace API.Helpers
         public MapingProfiles()
         {
             CreateMap<UpdateUserDto, User>();
+            CreateMap<NewTeamDto, Team>();
         }
     }
 }

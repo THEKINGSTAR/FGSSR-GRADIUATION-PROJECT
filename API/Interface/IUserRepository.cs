@@ -11,5 +11,7 @@ namespace API.Interface
         Task<User> GetCurrentUser(int UserCode);
         Task<User> CheckUser(int UserCode);
         Task<IEnumerable<object>> GetTeamMembers(int UserCode);
+        Task<int> GetMaxProjectId();
+        Task<IEnumerable<object>> GetAllMembers();
     }
 }

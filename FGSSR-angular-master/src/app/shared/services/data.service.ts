@@ -25,4 +25,17 @@ export class DataService {
   getTemaMember(userCode): any {
     return this.http.get(`${this.baseUrl}User/teamMember/${userCode}`);
   }
+
+  createTeam(data: any, usercode): any { 
+      return this.http.post(
+      `${this.baseUrl}user/newTeam/${usercode}`,
+      data
+    );
+  }
+
+
+  studentDataTeamRequest(usercode): any { 
+  return this.http.get(`${this.baseUrl}User/studentToTeam/${usercode}`);
+  }
+  
 }

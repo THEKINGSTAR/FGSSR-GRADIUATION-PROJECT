@@ -64,5 +64,41 @@ namespace API.Controllers
             }
             throw new Exception($"Creating search faild on statment !");
         }
+
+        [HttpPost("newTeam/{id}")]
+        public async Task<IActionResult> NewTeam(int id, NewTeamDto newTeamDto)
+        {
+            var user = await _userRepo.CheckUser(id);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var MaxProjectId = await _userRepo.GetMaxProjectId();
+            newTeamDto.ProjectID = MaxProjectId + 1;
+            var team = _mapper.Map<Team>(newTeamDto);
+            _userRepo.Add(team);
+            if (await _userRepo.SaveAll())
+            {
+                return NoContent();
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
+        [HttpGet("studentToTeam/{usercode}")]
+        public async Task<IActionResult> StudentToTeam(int usercode)
+        {
+            var user = await _userRepo.GetUserData(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var Student = await _userRepo.GetAllMembers();
+            if (Student != null)
+            {
+                return Ok(Student);
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
     }
 }
