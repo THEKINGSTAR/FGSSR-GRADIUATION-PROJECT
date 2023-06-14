@@ -39,4 +39,12 @@ namespace API.DTOs
         public string Websit { get; set; }
         public string JobName { get; set; }
     }
+    public class NewTeamDto
+    {
+        public string TeamName { get; set; }
+        public int ProjectID { get; set; }
+        public int TeamLeader { get; set; }
+        public string TeamTag { get; set; }
+        public string Deacription { get; set; }
+    }
 }

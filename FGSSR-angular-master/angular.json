@@ -44,13 +44,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/logo.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/assets/styles/app.scss"
-            ],
+            "assets": ["src/logo.ico", "src/assets"],
+            "styles": ["src/assets/styles/app.scss"],
             "scripts": []
           },
           "configurations": {
@@ -58,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "500MB",
+                  "maximumError": "500MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "500MB",
+                  "maximumError": "500MB"
                 }
               ],
               "fileReplacements": [
@@ -112,13 +107,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/logo.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/logo.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }

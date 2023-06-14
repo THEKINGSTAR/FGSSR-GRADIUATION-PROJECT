@@ -58,5 +58,15 @@ namespace API.Data
                         );
             return await result.ToListAsync();
         }
+
+        public async Task<int> GetMaxProjectId()
+        {
+            return await _context.Teams.MaxAsync(x => x.ProjectID);
+        }
+
+        public async Task<IEnumerable<object>> GetAllMembers()
+        {
+            return await _context.Teams.ToListAsync();
+        }
     }
 }

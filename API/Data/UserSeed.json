@@ -1,9 +1,14 @@
-[{
+[
+  {
     "UserName": "Admin",
-    "Email":"Admin@123.com",
-    "PhoneNumber":"123456789"
-},{
+    "Email": "Admin@123.com",
+    "PhoneNumber": "123456789",
+    "UserCode": 1
+  },
+  {
     "UserName": "Admin2",
-    "Email":"Admin2@123.com",
-    "PhoneNumber":"123456789"
-}]
+    "Email": "Admin2@123.com",
+    "PhoneNumber": "123456789",
+    "UserCode": 2
+  }
+]

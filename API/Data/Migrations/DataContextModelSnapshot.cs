@@ -163,6 +163,9 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Deacription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ProjectID")
                         .HasColumnType("int");
 
@@ -170,6 +173,9 @@ namespace API.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TeamName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamTag")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

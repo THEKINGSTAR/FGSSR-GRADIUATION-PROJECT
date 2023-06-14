@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { JwtAuthService } from 'app/shared/services/auth/jwt-auth.service';
+import { DataService } from 'app/shared/services/data.service';
 
 @Component({
   selector: 'app-wizard',
@@ -10,7 +12,7 @@ export class WizardComponent implements OnInit {
   firstFormGroup: UntypedFormGroup;
   secondFormGroup: UntypedFormGroup;
   ThirdFormGroup: UntypedFormGroup;
-  constructor(private fb: UntypedFormBuilder) { }
+  constructor(private fb: UntypedFormBuilder,private Jwtauth: JwtAuthService, private userDate: DataService ) { }
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({
@@ -24,10 +26,14 @@ export class WizardComponent implements OnInit {
     });
   }
   
-  submit() {
-    // Add your API
-    console.log(this.firstFormGroup.value);
-    console.log(this.secondFormGroup.value);
-    console.log(this.secondFormGroup.value);
+  submit(): void {
+    let ressult = {};
+    ressult["teamName"] = this.firstFormGroup.value.firstCtrl;
+    ressult["TeamTag"]  = this.secondFormGroup.value.secondCtrl;
+    ressult["deacription"] = this.ThirdFormGroup.value.ThirdCtrl;
+    ressult["teamLeader"] = this.Jwtauth.decodedToken.unique_name[0];
+    this.userDate.createTeam(ressult, this.Jwtauth.decodedToken.unique_name[0]).subscribe((res: any) => { 
+
+    });
   }
 }

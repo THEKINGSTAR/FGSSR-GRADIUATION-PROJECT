@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ahmedelsayed123-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\FGSSR2\\FGSSR_final\\API\\obj\\Release\\net7\.0\\win-x64\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="API.Data.DataContext" description="" value="" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\FGSSR2\\FGSSR_final\\API\\obj\\Release\\net7\.0\\win-x64\\PubTmp\\EFSQLScripts\\API\.Data\.DataContext\.sql$" />
+  </parameter>
+</parameters>

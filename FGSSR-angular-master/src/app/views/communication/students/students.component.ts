@@ -3,19 +3,9 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  Email: String;
-  Skills: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', Email: 'Mahmoud.com',Skills: 'H'},
-  {position: 2, name: 'Helium', Email: 'Mahmoud.com', Skills: 'He'},
-  {position: 3, name: 'Lithium', Email: 'Mahmoud.com', Skills: 'Li'},
-  {position: 4, name: 'Beryllium', Email: 'Mahmoud.com', Skills: 'Be'},
- 
-];
+import { JwtAuthService } from 'app/shared/services/auth/jwt-auth.service';
+import { DataService } from 'app/shared/services/data.service';
+
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -23,29 +13,17 @@ const ELEMENT_DATA: PeriodicElement[] = [
   
 })
 export class StudentsComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'Email', 'Skills','Add'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  studentData: any;
 
-  constructor(private _liveAnnouncer: LiveAnnouncer) { }
-  @ViewChild(MatSort) sort: MatSort;
+  constructor(private jwtAuth: JwtAuthService, private userData: DataService) { }
   
   ngOnInit(): void {
-  
+    this.userData.studentDataTeamRequest(this.jwtAuth.decodedToken.unique_name[0]).subscribe((res: any) => { 
+      this.studentData = res;
+    }, (error: any) => { 
+      console.log(error);
+    });
+  }
 
-  }
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-  }
-  
-  announceSortChange(sortState: Sort) {
-    // This example uses English messages. If your application supports
-    // multiple language, you would internationalize these strings.
-    // Furthermore, you can customize the message to add additional
-    // details about the values being sorted.
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-    } else {
-      this._liveAnnouncer.announce('Sorting cleared');
-    }
-  }
+  announceSortChange(event): any { }
 }
