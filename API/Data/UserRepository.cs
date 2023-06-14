@@ -43,5 +43,20 @@ namespace API.Data
         {
             return await _context.users.FirstOrDefaultAsync(x => x.UserCode == UserCode);
         }
+
+        public async Task<IEnumerable<object>> GetTeamMembers(int UserCode)
+        {
+            var teamid = await _context.TeamMembers.FirstOrDefaultAsync(x => x.UserID == UserCode);
+            var result = (from team in _context.TeamMembers
+                          join usr in _context.users on team.UserID equals usr.UserCode
+                          where team.TeamID == teamid.TeamID
+                          select new
+                          {
+                              name = usr.UserName,
+                              jobName = usr.JobName
+                          }
+                        );
+            return await result.ToListAsync();
+        }
     }
 }

@@ -16,10 +16,13 @@ export class DataService {
   }
 
   updateUserData(data: any, usercode): any {
-    console.log(data);
     return this.http.post(
       `${this.baseUrl}user/updateUserData/${usercode}`,
       data
     );
+  }
+
+  getTemaMember(userCode): any {
+    return this.http.get(`${this.baseUrl}User/teamMember/${userCode}`);
   }
 }

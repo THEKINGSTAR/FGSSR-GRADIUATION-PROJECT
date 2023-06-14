@@ -48,5 +48,21 @@ namespace API.Controllers
                 passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
         }
+
+        [HttpGet("teamMember/{usercode}")]
+        public async Task<IActionResult> CheckUser(int usercode)
+        {
+            var user = await _userRepo.GetUserData(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var Members = await _userRepo.GetTeamMembers(usercode);
+            if (Members != null)
+            {
+                return Ok(Members);
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
     }
 }

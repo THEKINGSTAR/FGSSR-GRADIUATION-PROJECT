@@ -10,5 +10,6 @@ namespace API.Interface
         Task<int> GetMaxCode();
         Task<User> GetCurrentUser(int UserCode);
         Task<User> CheckUser(int UserCode);
+        Task<IEnumerable<object>> GetTeamMembers(int UserCode);
     }
 }

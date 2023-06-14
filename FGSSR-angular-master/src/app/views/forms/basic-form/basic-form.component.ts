@@ -56,16 +56,17 @@ export class BasicFormComponent implements OnInit {
   }
 
   getUserData(): any {
-    // console.log(this.auth.decodedToken.unique_name[1]);
     this.user
       .getUserDataForWizard(this.auth.decodedToken.unique_name[0])
       .subscribe((res: any) => {
+        console.log(res);
         this.basicForm.controls.username.setValue(res.userName);
         this.basicForm.controls.email.setValue(res.email);
         this.basicForm.controls.websit.setValue(res.websit);
         this.basicForm.controls.userCode.setValue(
           this.auth.decodedToken.unique_name[0]
         );
+        this.basicForm.controls.jobname.setValue(res.jobName);
       });
   }
 
