@@ -39,8 +39,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     const token = localStorage.getItem("JWT_TOKEN");
     this.authService.decodedToken = this.jwtHelper.decodeToken(token);
     if (token) {
-      this.message.createHubConnection(token);
+      this.message.createHubConnection(this.authService.token);
     }
+    console.log(this.jwtHelper.decodeToken(token));
   }
 
   ngAfterViewInit() {}
@@ -67,10 +68,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       });
   }
 
-  loadCurrentUser(usercode, token: string): any {
-    this.authService.loadCurrentUser(usercode, token).subscribe((res: any) => {
-      this.authService.setUserAndToken(res.token, res, true);
-      // console.log(res);
-    });
-  }
+  // loadCurrentUser(usercode, token: string): any {
+  //   this.authService.loadCurrentUser(usercode, token).subscribe((res: any) => {
+  //     this.authService.setUserAndToken(res.token, res, true);
+  //     // console.log(res);
+  //   });
+  // }
 }

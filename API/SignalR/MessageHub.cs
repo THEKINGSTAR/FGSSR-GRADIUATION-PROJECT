@@ -1,17 +1,17 @@
 namespace API.SignalR
 {
-    [Authorize]
+    // [Authorize]
     public class MessageHub : Hub
     {
-        private readonly IMessageRepository _messageRepository;
+        // private readonly IMessageRepository _messageRepository;
         private readonly IMapper _mapper;
         private readonly MessageTracker _tracker;
 
-        public MessageHub(IMessageRepository messageRepository, IMapper mapper, MessageTracker tracker)
+        public MessageHub(IMapper mapper, MessageTracker tracker)
         {
             _tracker = tracker;
             _mapper = mapper;
-            _messageRepository = messageRepository;
+            // _messageRepository = messageRepository;
         }
 
         public override async Task OnConnectedAsync()

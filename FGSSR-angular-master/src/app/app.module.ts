@@ -34,6 +34,9 @@ import { AuthService } from "./shared/services/auth.service";
 import { JwtModule } from "@auth0/angular-jwt";
 import { ToastrModule } from "ngx-toastr";
 
+export function tokenGetterr(): any {
+  return localStorage.getItem("token");
+}
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -42,9 +45,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
-export function tokenGetterr(): any {
-  return localStorage.getItem("token");
-}
+
 @NgModule({
   imports: [
     FormsModule,

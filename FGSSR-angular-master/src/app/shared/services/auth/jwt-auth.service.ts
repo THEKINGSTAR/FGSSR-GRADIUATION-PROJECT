@@ -53,6 +53,7 @@ export class JwtAuthService {
       map((res: any) => {
         this.setUserAndToken(res.token, res, !!res);
         this.decodedToken = this.jwtHelper.decodeToken(res.token);
+        localStorage.setItem('JWT_TOKEN', res.token);
         this.signingIn = false;
         return res;
       }),
@@ -75,19 +76,6 @@ export class JwtAuthService {
     //       return throwError(error);
     //     })
     //   );
-  }
-
-  loadCurrentUser(usercode, token): any {
-    let headers = new HttpHeaders();
-    headers = headers.set("Authorization", `Bearer ${token}`);
-    console.log(
-      this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode, {
-        headers,
-      })
-    );
-    return this.http.get(this.baseUrl + "Auth/loadCurrentUser/" + usercode, {
-      headers,
-    });
   }
 
   public register(rissterData) {
@@ -156,13 +144,14 @@ export class JwtAuthService {
     return this.ls.getItem(this.APP_USER);
   }
 
-  setUserAndToken(token: String, user: User, isAuthenticated: Boolean) {
+  setUserAndToken(token: any, user: User, isAuthenticated: Boolean) {
     this.isAuthenticated = isAuthenticated;
     this.token = token;
     this.user = user;
     this.user$.next(user);
     this.currentUserSource.next(user);
-    this.ls.setItem(this.JWT_TOKEN, token);
+    // this.ls.setItem(this.JWT_TOKEN, token);
+    // localStorage.setItem('JWT_TOKEN', token);
     this.ls.setItem(this.APP_USER, user);
   }
 }

@@ -20,12 +20,11 @@ export class MessageSignalrService {
   createHubConnection(token): any {
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + "message", {
-        accessTokenFactory: () => token,
+        accessTokenFactory: () => localStorage.getItem('JWT_TOKEN'),
       })
       .withAutomaticReconnect()
       .build();
     this.hubConnection.start().catch((error) => console.log(error));
-    console.log(token);
     // this.hubConnection.on("ReceiveMessageThread", (message) => {
     //   this.messageNumberThreadSource.next(message);
     //   this.messageNumberThread$.pipe(take(1)).subscribe((phoneChat) => {

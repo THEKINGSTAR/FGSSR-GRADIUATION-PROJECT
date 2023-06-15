@@ -15,9 +15,7 @@ import { SharedPipesModule } from "./pipes/shared-pipes.module";
 import { SharedDirectivesModule } from "./directives/shared-directives.module";
 import { JwtModule } from "@auth0/angular-jwt";
 
-export function tokenGetterr(): any {
-  return localStorage.getItem("JWT_TOKEN");
-}
+
 
 @NgModule({
   imports: [
@@ -25,13 +23,6 @@ export function tokenGetterr(): any {
     SharedComponentsModule,
     SharedPipesModule,
     SharedDirectivesModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetterr,
-        allowedDomains: ["localhost:5001"],
-        disallowedRoutes: ["localhost:5001/auth"],
-      },
-    }),
   ],
   providers: [
     ThemeService,

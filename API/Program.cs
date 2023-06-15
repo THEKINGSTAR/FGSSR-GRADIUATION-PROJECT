@@ -25,23 +25,22 @@ app.UseRouting();
 app.UseCors(x => x.AllowAnyHeader()
          .AllowAnyMethod()
          .AllowCredentials()
-         .WithOrigins("http://localhost:4200"));
-app.UseAuthorization();
+         .WithOrigins("https://localhost:4200"));
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.MapControllerRoute("Default", "{controller=Fallback}/{action=Index}/{id?}");
 app.MapFallbackToController("Index", "Fallback");
-app.MapHub<MessageHub>("hubs/message");
 app.UseHttpsRedirection();
-
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var context = services.GetRequiredService<DataContext>();
 var logger = services.GetRequiredService<ILogger<Program>>();
 await context.Database.MigrateAsync();
 await Seed.SeedUser(context);
+app.MapHub<MessageHub>("hubs/message");
 try
 {
     await context.Database.MigrateAsync();

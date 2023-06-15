@@ -17,7 +17,6 @@ namespace API.Extinsions
             services.AddSingleton<MessageTracker>();
             services.AddSignalR();
             services.AddScoped<IUserRepository, UserRepository>();
-
             return services;
         }
     }
