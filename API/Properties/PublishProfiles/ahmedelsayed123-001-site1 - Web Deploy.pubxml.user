@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyq3a2znUQEGBg6XvadYeHgAAAAACAAAAAAAQZgAAAAEAACAAAAACLxpih1UaPeu5aBfqtJe5ES2RD/xIrkBjy8S9C8JntQAAAAAOgAAAAAIAACAAAAA/6yzpmc8wBZEewW/0lpe2NKiMsJXC8m2VHYVt4N8SjCAAAAAi+eA3vI2NfCeDWCepqPwEafIjZoSttsxhHAbwgqug9kAAAACUyjT2KGLw5zlRyWNyZ1ECAOQaPSESXJ6dTRYxvFR6Q9iCPM7HAtPOBsvERSFFrlw5qSdzBcDOphzc4eQb2yfU</EncryptedPassword>
+    <History>True|2023-06-15T13:08:07.5934264Z;True|2023-06-15T16:02:27.0359312+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=SQL5106.site4now.net%3bInitial Catalog=db_a99345_fgssr%3bUser Id=db_a99345_fgssr_admin%3bPassword=Admin%40123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="API.Data.DataContext">
+      <Value>Data Source=SQL5106.site4now.net%3bInitial Catalog=db_a99345_fgssr%3bUser Id=db_a99345_fgssr_admin%3bPassword=Admin%40123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

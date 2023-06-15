@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="ahmedelsayed123-001-site1" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\FGSSR2\\FGSSR_final\\API\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\FGSSR3\\FGSSR_final\\API\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="API.Data.DataContext" description="" value="Data Source=SQL5106.site4now.net;Initial Catalog=db_a99345_fgssr;User Id=db_a99345_fgssr_admin;Password=Admin@123" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\FGSSR3\\FGSSR_final\\API\\obj\\Release\\net7\.0\\PubTmp\\EFSQLScripts\\API\.Data\.DataContext\.sql$" />
   </parameter>
 </parameters>

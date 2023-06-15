@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="D:\FGSSR2\FGSSR_final\API\obj\Release\net7.0\PubTmp\Out\" />
+  <IisApp path="D:\FGSSR3\FGSSR_final\API\obj\Release\net7.0\PubTmp\Out\" />
+  <dbfullsql path="D:\FGSSR3\FGSSR_final\API\obj\Release\net7.0\PubTmp\EFSQLScripts\API.Data.DataContext.sql" />
 </sitemanifest>
