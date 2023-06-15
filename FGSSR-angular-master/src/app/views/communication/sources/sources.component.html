@@ -6,7 +6,7 @@
 <p>
  
   <select formControlName="Skill"  style="height: 40px; width: 50%;">
-    <option [ngValue]="null" disabled>Select Skill</option>
+    <option [ngValue]="null" >Select Skill</option>
     <option *ngFor="let Skill of Skills" [ngValue]="Skill.item_text">{{Skill.item_text}}</option>
   </select>
  

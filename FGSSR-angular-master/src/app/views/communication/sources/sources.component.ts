@@ -147,15 +147,22 @@ export class SourcesComponent implements OnInit {
         this.onSkillChanged(f);
       })
   }
-  
+   
   submit() {
-    if(this.contactForm.value==null){
+
+
+    if(this.contactForm.value==undefined || this.contactForm.value.Skill==undefined){
       alert('please select Skill');
+      
     }
     else{
     console.log("Form Submitted");
-    console.log(this.contactForm.value);
-    this.service. getresource(this.contactForm.value).subscribe(response => {
+
+    var itemArr = {
+      input:this.contactForm.value.Skill
+    }
+    
+    this.service. getresource(itemArr).subscribe(response => {
       console.log('mm',response);
       this.posts = response.result;
       console.log('Mahmi',this.posts);
