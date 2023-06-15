@@ -22,7 +22,10 @@ if (app.Environment.IsDevelopment())
 app.UseDeveloperExceptionPage();
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(x => x.AllowAnyHeader()
+         .AllowAnyMethod()
+         .AllowCredentials()
+         .WithOrigins("http://localhost:4200"));
 app.UseAuthorization();
 app.UseAuthentication();
 app.MapControllers();
@@ -37,7 +40,6 @@ using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var context = services.GetRequiredService<DataContext>();
 var logger = services.GetRequiredService<ILogger<Program>>();
-// var userManager = services.GetRequiredService<UserManager<User>>();
 await context.Database.MigrateAsync();
 await Seed.SeedUser(context);
 try
