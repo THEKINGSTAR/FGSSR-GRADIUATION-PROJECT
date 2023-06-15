@@ -10,6 +10,7 @@ import { LayoutService } from "./shared/services/layout.service";
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { AuthService } from "./shared/services/auth.service";
 import { JwtAuthService } from "./shared/services/auth/jwt-auth.service";
+import { MessageSignalrService } from "./shared/services/auth/message-signalr.service";
 
 @Component({
   selector: "app-root",
@@ -27,7 +28,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     private routePartsService: RoutePartsService,
     private iconService: UILibIconService,
     private layoutService: LayoutService,
-    private authService: JwtAuthService
+    private authService: JwtAuthService,
+    private message: MessageSignalrService
   ) {
     iconService.init();
   }
@@ -35,13 +37,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.changePageTitle();
     const token = localStorage.getItem("JWT_TOKEN");
-    // this.loadCurrentUser();
     this.authService.decodedToken = this.jwtHelper.decodeToken(token);
-    // this.loadCurrentUser(this.authService.decodedToken.unique_name[0], token);
-    // this.user = this.authService.currentUser$.subscribe((res: any) => {
-    //   console.log(res);
-    // });
-    // this.themeService.applyMatTheme(this.layoutService.layoutConf.matTheme);
+    if (token) {
+      this.message.createHubConnection(token);
+    }
   }
 
   ngAfterViewInit() {}
