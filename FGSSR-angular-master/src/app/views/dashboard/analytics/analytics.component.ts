@@ -1,14 +1,11 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  ChangeDetectionStrategy
+import {Component,OnInit,AfterViewInit,ChangeDetectionStrategy
 } from "@angular/core";
 import { matxAnimations } from "app/shared/animations/matx-animations";
 import { ThemeService } from "app/shared/services/theme.service";
 import tinyColor from "tinycolor2";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: "app-analytics",
@@ -33,6 +30,7 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
   trafficSourcesChart: any;
   countryTrafficStats: any[];
   doughNutPieOptions: any;
+  teamtaskk:any;
 
   statCardList = [
     {
@@ -118,10 +116,11 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
   ];
 
   displayedColumns: string[] = ["name", "price", "available", "action"];
-
+  
   constructor(private themeService: ThemeService,public route: Router) {}
 
   ngAfterViewInit() {}
+
   ngOnInit() {
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initDoughNutPieOptions(activeTheme);
@@ -129,6 +128,10 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
     });
     this.initDailyTrafficChartBar(this.themeService.activatedTheme);
     this.initDoughNutPieOptions(this.themeService.activatedTheme);
+   
+  }
+  TaskLink(){
+    this.route.navigate(['/communication/Tasks']);
   }
   ResourceLink(){
     this.route.navigate(['/communication/Sources']);
@@ -376,4 +379,5 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
         status: `out of stcok`
       };
   }
+
 }

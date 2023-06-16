@@ -23,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import {NgFor} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { TasksComponent } from './tasks/tasks.component';
 @NgModule({
   imports: [
     NgMultiSelectDropDownModule.forRoot(),
@@ -49,6 +50,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     StudentsComponent,
     TeamMemberComponent,
     SourcesComponent,
+    TasksComponent,
   ],
   exports: [],
 })
