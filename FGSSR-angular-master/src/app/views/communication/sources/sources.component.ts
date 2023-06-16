@@ -159,7 +159,7 @@ export class SourcesComponent implements OnInit {
     console.log("Form Submitted");
 
     var itemArr = {
-      input:this.contactForm.value.Skill
+      inputs:this.contactForm.value.Skill
     }
     
     this.service. getresource(itemArr).subscribe(response => {

@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Data"
+    "\\Data",
+    "\\Date",
+    "\\Date\\Migrations"
   ],
   "SelectedNode": "\\Data\\UserSeed.json",
   "PreviewInSolutionExplorer": false

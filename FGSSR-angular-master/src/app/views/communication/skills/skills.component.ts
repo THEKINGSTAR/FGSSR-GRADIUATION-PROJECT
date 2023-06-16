@@ -181,6 +181,7 @@ console.log(this.selectedItems);
 
   if(this.count==0){
   this.isButtonVisible = false;
+  this.isButtonVisibleAI=false;
 }
 
 } 
@@ -196,7 +197,7 @@ for(var i=0;i<this.selectedItems.length; i++){
 
 console.log(txt);
 var itemArr = {
-  input:txt
+  inputs:txt
 }
 
 console.log(itemArr);
