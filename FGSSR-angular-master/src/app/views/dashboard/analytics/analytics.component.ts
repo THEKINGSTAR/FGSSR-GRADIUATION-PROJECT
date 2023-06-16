@@ -130,6 +130,9 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
     this.initDailyTrafficChartBar(this.themeService.activatedTheme);
     this.initDoughNutPieOptions(this.themeService.activatedTheme);
   }
+  ResourceLink(){
+    this.route.navigate(['/communication/Sources']);
+  }
   TeamtLink(){
     this.route.navigate(['forms/wizard']);
   }

@@ -21,10 +21,11 @@
     <strong >  Learning Sources </strong>
     <mat-card>
     <div>
-        
+      
         <div *ngFor="let post of posts">
             <p></p>
             <p></p>
+            <mat-card>
          <strong>Name of Channel: {{ post.channel_title}}</strong> 
          <p></p>
          <strong>Title: {{ post.title}}</strong>
@@ -32,8 +33,10 @@
         <strong>URL:</strong> <strong><a href="url"> {{ post.url}}</a></strong> 
          <p></p>
          <strong>Views: {{ post.views}}</strong> 
+        </mat-card>
         </div>
-:
-                  </div></mat-card>
+      
+                  </div>
+                </mat-card>
    
 </mat-card>
