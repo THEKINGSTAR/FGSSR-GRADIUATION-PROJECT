@@ -1,25 +1,22 @@
-<mat-grid-list cols="3" rowHeight="3:1">
-  <mat-grid-tile style="background: rgb(173, 186, 230);  cursor: pointer; font-size: large;" (click)="ProjectLink()">Add
-    Project</mat-grid-tile>
-  <mat-grid-tile style="background: rgba(144, 238, 144, 0.89);  cursor: pointer;font-size: large;"
-    (click)="StudentLink()">Add Memebr</mat-grid-tile>
-  <mat-grid-tile style="background: lightpink;  cursor: pointer;font-size: large;" (click)="TaskLink()">Add
-    Task</mat-grid-tile>
-  <mat-grid-tile style="background: rgba(255, 0, 0, 0.637);  cursor: pointer; font-size: large;"
-    (click)="ResourceLink()">Learning Resources</mat-grid-tile>
-  <mat-grid-tile style="background: rgb(29, 110, 182);  cursor: pointer;font-size: large;" (click)="TeamtLink() ">Create
-    Team</mat-grid-tile>
-  <mat-grid-tile style="background: rgba(128, 0, 128, 0.849);  cursor: pointer;font-size: large;"
-    (click)="skillsLink()">Add Skills</mat-grid-tile>
+<mat-grid-list cols="3" rowHeight="3:1" >
+  <mat-grid-tile style="background: rgb(173, 186, 230);  cursor: pointer; font-size: large;"(click)="ProjectLink()">Add Project</mat-grid-tile>
+  <mat-grid-tile style="background: rgba(144, 238, 144, 0.89);  cursor: pointer;font-size: large;" (click)="StudentLink()">Add Memebr</mat-grid-tile>
+  <mat-grid-tile style="background: lightpink;  cursor: pointer;font-size: large;" (click)="TaskLink()">Add Task</mat-grid-tile>
+  <mat-grid-tile style="background: rgba(255, 0, 0, 0.637);  cursor: pointer; font-size: large;"(click)="ResourceLink()">Learning Resources</mat-grid-tile>
+  <mat-grid-tile style="background: rgb(29, 110, 182);  cursor: pointer;font-size: large;"(click)="TeamtLink() ">Create Team</mat-grid-tile>
+  
+  <mat-grid-tile style="background: rgba(128, 0, 128, 0.849);  cursor: pointer;font-size: large;" (click)="skillsLink()" >Add Skills</mat-grid-tile>
 </mat-grid-list>
-<div class="mt--72">
+  <div class="mt--72">
   <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.sm="70" fxFlex.gt-sm="70">
-
+     
+      
       <div class="py-16" fxLayout="column wrap">
-        <mat-card-title class="mx-8">{{ teamNames.teamName }}</mat-card-title>
-        <mat-card>Deacription : {{ teamNames.deacription }}</mat-card>
+        <mat-card-title class="mx-8">Team Name: {{teamNames}}</mat-card-title>
+        <mat-card>Deacription : {{ teamNames }}</mat-card>
       </div>
+    
     </div>
   </div>
   <div class="mt--72">

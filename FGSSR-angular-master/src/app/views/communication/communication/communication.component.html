@@ -5,9 +5,9 @@
 
     <p>
 
-      <select formControlName="add" style="height: 40px; width: 50%;">
+      <select formControlName="deacription" style="height: 40px; width: 50%;">
         <option [ngValue]="null">Select project</option>
-        <option *ngFor="let description of adds" [ngValue]="description">{{ description }}</option>
+        <option *ngFor="let deacription of deacriptions" [ngValue]="deacription">{{ deacription }}</option>
       </select>
 
       <button mat-raised-button color="primary" type="submit" style="margin-left: 300px; border-top: 400px;">Add

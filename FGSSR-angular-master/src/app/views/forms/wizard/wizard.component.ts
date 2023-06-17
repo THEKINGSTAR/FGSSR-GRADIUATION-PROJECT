@@ -30,7 +30,7 @@ export class WizardComponent implements OnInit {
     let ressult = {};
     ressult["teamName"] = this.firstFormGroup.value.firstCtrl;
     ressult["TeamTag"]  = this.secondFormGroup.value.secondCtrl;
-    ressult["deacription"] = this.ThirdFormGroup.value.ThirdCtrl;
+    ressult["Deacription"] = this.ThirdFormGroup.value.ThirdCtrl;
     ressult["teamLeader"] = this.Jwtauth.decodedToken.unique_name[0];
     this.userDate.createTeam(ressult, this.Jwtauth.decodedToken.unique_name[0]).subscribe((res: any) => { 
 

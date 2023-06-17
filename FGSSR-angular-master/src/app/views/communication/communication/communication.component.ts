@@ -24,12 +24,12 @@ export class CommunicationComponent implements OnInit {
     });
 
     this.contactForm.get("deacription").valueChanges.subscribe((f) => {
-      this.onaddsChanged(f);
+      this.ondescriptionChanged(f);
     });
   }
 
   //Add project
-  adds = [
+  deacriptions = [
     "Social Media App Development",
     "E-commerce Website Development",
     "Data Visualization Dashboard Development",
@@ -190,8 +190,7 @@ export class CommunicationComponent implements OnInit {
   }
   submit() {
     if (
-      this.contactForm.value == undefined ||
-      this.contactForm.value.deacription == undefined
+      this.contactForm.value == undefined ||this.contactForm.value.deacription == undefined
     ) {
       console.log(this.contactForm.value);
       alert("please select Project");
@@ -207,7 +206,7 @@ export class CommunicationComponent implements OnInit {
     }
   }
 
-  onaddsChanged(value) {
+  ondescriptionChanged(value) {
     // console.log("onaddChanged");
     // console.log(value);
   }
