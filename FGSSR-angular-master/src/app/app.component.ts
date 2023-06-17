@@ -41,7 +41,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (token) {
       this.message.createHubConnection(this.authService.token);
     }
-    console.log(this.jwtHelper.decodeToken(token));
+    // console.log(this.jwtHelper.decodeToken(token));
   }
 
   ngAfterViewInit() {}

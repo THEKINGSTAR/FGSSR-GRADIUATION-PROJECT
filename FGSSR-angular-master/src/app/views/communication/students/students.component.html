@@ -1,40 +1,38 @@
 <mat-card>
   All Students
 </mat-card>
-<mat-card>
+<!-- <mat-card>
   <table mat-table [dataSource]="studentData" matSort (matSortChange)="announceSortChange($event)"
     class="mat-elevation-z8">
 
-    <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
         No.
       </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
-    <!-- Name Column -->
+
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
         Name
       </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
     </ng-container>
 
-    <!-- Weight Column -->
     <ng-container matColumnDef="Email">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
         Email
       </th>
-      <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
+ 
     <ng-container matColumnDef="Skills">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
         Skills
       </th>
-      <td mat-cell *matCellDef="let element"> {{element.Skills}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.jobName}} </td>
     </ng-container>
     <ng-container matColumnDef="Add">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
@@ -44,9 +42,33 @@
         <button mat-raised-button color="primary">Add Student</button>
       </td>
     </ng-container>
-    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+  
   </table>
 
 
-</mat-card>
+</mat-card> -->
+
+<div class="box-wrap">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>sr no.</th>
+          <th>Name</th>
+          <th>Job title</th>
+          <th>Website</th>
+          <th>Add Student</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of studentData">
+          <td>{{ item.userCode }}</td>
+          <td>{{ item.userName }}</td>
+          <td>{{ item.jobName }}</td>
+          <td>{{ item.websit }}</td>
+          <button mat-raised-button color="primary" (click)="onSubmit(item.userCode)"> Add Student </button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

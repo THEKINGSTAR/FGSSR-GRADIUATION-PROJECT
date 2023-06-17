@@ -26,16 +26,22 @@ export class DataService {
     return this.http.get(`${this.baseUrl}User/teamMember/${userCode}`);
   }
 
-  createTeam(data: any, usercode): any { 
-      return this.http.post(
-      `${this.baseUrl}user/newTeam/${usercode}`,
-      data
+  createTeam(data: any, usercode): any {
+    return this.http.post(`${this.baseUrl}user/newTeam/${usercode}`, data);
+  }
+
+  studentDataTeamRequest(usercode): any {
+    return this.http.get(`${this.baseUrl}User/studentToTeam/${usercode}`);
+  }
+
+  addTeamMember(userCode, id): any {
+    return this.http.get(`${this.baseUrl}user/addTeamMember/${userCode}/${id}`);
+  }
+
+  addProject(projectName, usercode): any {
+    console.log(projectName);
+    return this.http.get(
+      `${this.baseUrl}user/addProject/${projectName}/${usercode}`
     );
   }
-
-
-  studentDataTeamRequest(usercode): any { 
-  return this.http.get(`${this.baseUrl}User/studentToTeam/${usercode}`);
-  }
-  
 }

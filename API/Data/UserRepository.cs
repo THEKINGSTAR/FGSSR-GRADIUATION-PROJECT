@@ -66,7 +66,7 @@ namespace API.Data
 
         public async Task<IEnumerable<object>> GetAllMembers()
         {
-            return await _context.Teams.ToListAsync();
+            return await _context.users.ToListAsync();
         }
     }
 }

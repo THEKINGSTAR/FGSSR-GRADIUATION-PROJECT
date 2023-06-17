@@ -100,5 +100,25 @@ namespace API.Controllers
             throw new Exception($"Creating search faild on statment !");
         }
 
+        [HttpGet("addTeamMember/{usercode}/{id}")]
+        public async Task<IActionResult> AddTeamMember(int usercode, int id)
+        {
+            var user = await _userRepo.GetUserData(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var teamMember = new TeamMember();
+            teamMember.TeamID = usercode;
+            teamMember.UserID = id;
+            _userRepo.Add(teamMember);
+            // var Student = await _userRepo.AddTeamMember(usercode, id);
+            if (await _userRepo.SaveAll())
+            {
+                return NoContent();
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
     }
 }
