@@ -1,1 +1,53 @@
-<p>communication works!</p>
+
+<mat-card style="height:200px;background-color: antiquewhite; ">
+    <h1>Add Project</h1>
+ 
+<form [formGroup]="contactForm" (ngSubmit)="submit()">
+ 
+<p>
+ 
+  <select formControlName="add"  style="height: 40px; width: 50%;">
+    <option [ngValue]="null" >Select project</option>
+    <option *ngFor="let add of adds" [ngValue]="add">{{add}}</option>
+  </select>
+ 
+  <button  mat-raised-button color="primary" type="submit"  style="margin-left: 300px; border-top: 400px;" >Add project</button>
+  
+</p>
+ 
+</form>
+</mat-card>
+<mat-card style="background-color: antiquewhite;">
+    <button  mat-raised-button color="primary" (click)="showprojects()"  style="display: flex;justify-content: center;justify-items: center;margin: auto;" >projects Descriptions</button>
+</mat-card>
+
+
+
+
+<mat-card class="p-0" style="background-color: antiquewhite;" *ngIf="showprojectdescription">
+    <div class="project-card" *ngFor="let project of projects">
+        <mat-card class="p-0">
+            <mat-card>
+        <h2>{{ project.title }}</h2></mat-card>
+        <p> &nbsp;&nbsp;&nbsp;{{ project.description }}</p>
+        <p> &nbsp;{{ project.additionalDetails }}</p>
+    </mat-card>
+      </div>
+      
+<div *ngIf="showAdditionalProjects">
+  <div *ngFor="let project of additionalProjects">
+    <div class="project-card">
+        <mat-card class="p-0">
+            <mat-card >
+      <h2> {{ project.title }}</h2>
+    </mat-card>
+      <p> &nbsp;&nbsp;&nbsp;{{ project.description }}</p>
+      <p> &nbsp; {{ project.additionalDetails }}</p>
+    </mat-card>
+    </div>
+  </div>
+</div>
+
+<button (click)="showMore()">See More Projects</button>
+
+</mat-card>

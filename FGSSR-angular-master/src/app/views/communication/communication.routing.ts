@@ -12,7 +12,7 @@ export const CommunicationRoutes: Routes = [
   {
     path: "communication",
     component: CommunicationComponent,
-    data: { title: "communication", breadcrumb: "Connect" },
+    data: { title: "Projects", breadcrumb: "Projects" },
   },
   {
     path: "chat",

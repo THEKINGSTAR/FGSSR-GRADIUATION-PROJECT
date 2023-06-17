@@ -40,7 +40,7 @@ export class NavigationService {
       type: "separator",
     },
     {
-      name: "Commenications",
+      name: "Projects",
       state: "communication/communication",
       type: "link",
       icon: "grain",
@@ -104,7 +104,7 @@ export class NavigationService {
       icon: "upload",
     },
     {
-      name: "WIZARD",
+      name: "Create Team",
       state: "forms/wizard",
       type: "link",
       icon: "grain",

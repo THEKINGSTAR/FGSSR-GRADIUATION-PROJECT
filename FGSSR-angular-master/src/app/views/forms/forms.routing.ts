@@ -25,7 +25,7 @@ export const FormsRoutes: Routes = [
       }, {
         path: 'wizard',
         component: WizardComponent,
-        data: { title: 'Wizard', breadcrumb: 'WIZARD' }
+        data: { title: 'Team', breadcrumb: 'Create Team' }
       }
     ]
   }
