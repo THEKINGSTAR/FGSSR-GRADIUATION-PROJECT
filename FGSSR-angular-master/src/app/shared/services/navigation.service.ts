@@ -91,18 +91,18 @@ export class NavigationService {
       type: "link",
       icon: "description",
     },
-    {
-      name: "EDITOR",
-      state: "forms/editor",
-      type: "link",
-      icon: "subject",
-    },
-    {
-      name: "UPLOAD",
-      state: "forms/upload",
-      type: "link",
-      icon: "upload",
-    },
+    // {
+    //   name: "EDITOR",
+    //   state: "forms/editor",
+    //   type: "link",
+    //   icon: "subject",
+    // },
+    // {
+    //   name: "UPLOAD",
+    //   state: "forms/upload",
+    //   type: "link",
+    //   icon: "upload",
+    // },
     {
       name: "Create Team",
       state: "forms/wizard",
@@ -110,46 +110,46 @@ export class NavigationService {
       icon: "grain",
     },
 
-    {
-      name: "PAGES",
-      type: "separator",
-    },
-    {
-      name: "SESSIONS",
-      type: "dropDown",
-      tooltip: "Pages",
-      icon: "view_carousel",
-      sub: [
-        { name: "SIGNUP", state: "sessions/signup" },
-        { name: "SIGNIN", state: "sessions/signin" },
-        { name: "NOTFOUND", state: "sessions/404" },
-      ],
-    },
-    {
-      name: "OTHERS",
-      type: "dropDown",
-      tooltip: "Others",
-      icon: "blur_on",
-      sub: [
-        { name: "GALLERY", state: "others/gallery" },
-        { name: "PRICINGS", state: "others/pricing" },
-        { name: "USERS", state: "others/users" },
-        { name: "BLANK", state: "others/blank" },
-      ],
-    },
-    {
-      name: "Pro",
-      type: "extLink",
-      icon: "upgrade",
-      state: "http://matx-angular.ui-lib.com/",
-    },
-    {
-      name: "DOC",
-      type: "extLink",
-      tooltip: "Documentation",
-      icon: "library_books",
-      state: "http://demos.ui-lib.com/matx-doc/",
-    },
+    // {
+    //   name: "PAGES",
+    //   type: "separator",
+    // },
+    // {
+    //   name: "SESSIONS",
+    //   type: "dropDown",
+    //   tooltip: "Pages",
+    //   icon: "view_carousel",
+    //   sub: [
+    //     { name: "SIGNUP", state: "sessions/signup" },
+    //     { name: "SIGNIN", state: "sessions/signin" },
+    //     { name: "NOTFOUND", state: "sessions/404" },
+    //   ],
+    // },
+    // // {
+    //   name: "OTHERS",
+    //   type: "dropDown",
+    //   tooltip: "Others",
+    //   icon: "blur_on",
+    //   sub: [
+    //     { name: "GALLERY", state: "others/gallery" },
+    //     { name: "PRICINGS", state: "others/pricing" },
+    //     { name: "USERS", state: "others/users" },
+    //     { name: "BLANK", state: "others/blank" },
+    //   ],
+    // },
+    // {
+    //   name: "Pro",
+    //   type: "extLink",
+    //   icon: "upgrade",
+    //   state: "http://matx-angular.ui-lib.com/",
+    // },
+    // {
+    //   name: "DOC",
+    //   type: "extLink",
+    //   tooltip: "Documentation",
+    //   icon: "library_books",
+    //   state: "http://demos.ui-lib.com/matx-doc/",
+    // },
   ];
 
   // Icon menu TITLE at the very top of navigation.

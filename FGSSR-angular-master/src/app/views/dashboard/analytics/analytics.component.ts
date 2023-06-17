@@ -145,6 +145,9 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
   StudentLink(){
     this.route.navigate(['/communication/Students']);
   }
+  ProjectLink(){
+    this.route.navigate(['/communication/communication']);
+  }
   initDoughNutPieOptions(theme) {
     this.doughNutPieOptions = {
       backgroundColor: "transparent",
