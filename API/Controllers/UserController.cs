@@ -73,8 +73,8 @@ namespace API.Controllers
             {
                 return BadRequest($"You don't have permission to enter!");
             }
-            var MaxProjectId = await _userRepo.GetMaxProjectId();
-            newTeamDto.ProjectID = MaxProjectId + 1;
+            var ProjectId = await _userRepo.ProjectToRecordTeam(id);
+            newTeamDto.ProjectID = ProjectId.ProjectID;
             var team = _mapper.Map<Team>(newTeamDto);
             _userRepo.Add(team);
             if (await _userRepo.SaveAll())
@@ -120,5 +120,78 @@ namespace API.Controllers
             throw new Exception($"Creating search faild on statment !");
         }
 
+        [HttpGet("getTeamName/{usercode}")]
+        public async Task<IActionResult> GetTeamName(int usercode)
+        {
+            var user = await _userRepo.GetUserData(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var team = await _userRepo.GetTeamName(usercode);
+            if (team != null)
+            {
+                return Ok(team);
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
+        [HttpPost("CreateProject/{id}")]
+        public async Task<IActionResult> CreateProject(int id, ProjectDto projectDto)
+        {
+            var user = await _userRepo.CheckUser(id);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var team = await _userRepo.GetTeamName(id);
+            projectDto.TeamName = team.TeamName;
+            var MaxProjectId = await _userRepo.GetMaxProjectId();
+            projectDto.ProjectID = MaxProjectId + 1;
+            var Project = _mapper.Map<UserProject>(projectDto);
+            _userRepo.Add(Project);
+            if (await _userRepo.SaveAll())
+            {
+                return NoContent();
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
+        [HttpPost("CreateTask/{usercode}")]
+        public async Task<IActionResult> CreateTask(int usercode, TaskDto taskDto)
+        {
+            var user = await _userRepo.CheckUser(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var Project = await _userRepo.ProjectToRecordTeam(usercode);
+            taskDto.ProjectID = Project.ProjectID;
+            taskDto.AssignedTo = usercode;
+            taskDto.UserID = usercode;
+            var task = _mapper.Map<Tasks>(taskDto);
+            _userRepo.Add(task);
+            if (await _userRepo.SaveAll())
+            {
+                return NoContent();
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
+
+        [HttpGet("getTeamTasks/{usercode}")]
+        public async Task<IActionResult> GetTeamTasks(int usercode)
+        {
+            var user = await _userRepo.GetUserData(usercode);
+            if (user == null)
+            {
+                return BadRequest($"You don't have permission to enter!");
+            }
+            var Tasks = await _userRepo.GetTeamTasks(usercode);
+            if (Tasks != null)
+            {
+                return Ok(Tasks);
+            }
+            throw new Exception($"Creating search faild on statment !");
+        }
     }
 }

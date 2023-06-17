@@ -47,4 +47,20 @@ namespace API.DTOs
         public string TeamTag { get; set; }
         public string Deacription { get; set; }
     }
+    public class ProjectDto
+    {
+        public int UserID { get; set; }
+        public int ProjectID { get; set; }
+        public string Role { get; set; }
+        public string TeamName { get; set; }
+        public string Deacription { get; set; }
+    }
+    public class TaskDto
+    {
+        public string TaskName { get; set; }
+        public string Description { get; set; }
+        public int ProjectID { get; set; }
+        public int AssignedTo { get; set; }
+        public int UserID { get; set; }
+    }
 }

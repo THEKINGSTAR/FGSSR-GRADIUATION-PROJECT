@@ -38,10 +38,22 @@ export class DataService {
     return this.http.get(`${this.baseUrl}user/addTeamMember/${userCode}/${id}`);
   }
 
-  addProject(projectName, usercode): any {
-    console.log(projectName);
-    return this.http.get(
-      `${this.baseUrl}user/addProject/${projectName}/${usercode}`
+  createTask(task, usercode): any {
+    return this.http.post(`${this.baseUrl}user/CreateTask/${usercode}`, task);
+  }
+
+  getTeamName(usercode): any {
+    return this.http.get(`${this.baseUrl}user/getTeamName/${usercode}`);
+  }
+
+  CreateProject(data, usercode): any {
+    return this.http.post(
+      `${this.baseUrl}user/CreateProject/${usercode}`,
+      data
     );
+  }
+
+  getTeamTasks(usercode): any {
+    return this.http.get(`${this.baseUrl}user/getTeamTasks/${usercode}`);
   }
 }

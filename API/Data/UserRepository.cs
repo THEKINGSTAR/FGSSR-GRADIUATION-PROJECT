@@ -59,14 +59,29 @@ namespace API.Data
             return await result.ToListAsync();
         }
 
-        public async Task<int> GetMaxProjectId()
+        public async Task<UserProject> ProjectToRecordTeam(int userCode)
         {
-            return await _context.Teams.MaxAsync(x => x.ProjectID);
+            return await _context.UserProjects.FirstOrDefaultAsync(x => x.UserID == userCode);
         }
 
         public async Task<IEnumerable<object>> GetAllMembers()
         {
             return await _context.users.ToListAsync();
+        }
+
+        public async Task<Team> GetTeamName(int Usercode)
+        {
+            return await _context.Teams.FirstOrDefaultAsync(x => x.TeamLeader == Usercode);
+        }
+
+        public async Task<int> GetMaxProjectId()
+        {
+            return await _context.UserProjects.MaxAsync(x => x.ProjectID);
+        }
+
+        public async Task<IEnumerable<object>> GetTeamTasks(int usercode)
+        {
+            return await _context.task.Where(x => x.UserID == usercode).ToListAsync();
         }
     }
 }
