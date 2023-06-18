@@ -157,31 +157,31 @@ export class SkillsComponent implements OnInit {
  
   }
    count =0 ;
+    
   onItemSelect(item: any) {
     //console.log('onItemSelect', item);
 
+   var here=this;
+   here.isButtonVisible = true;
+   here.selectedItems.push(item);
+console.log(here.selectedItems);
 
-
-this.selectedItems.push(item);
-
-console.log(this.selectedItems);
-
-   this.isButtonVisible = true;
-this.count++;
+here.count++;
 //console.log(this.count);
 }
 onItemDeSelect(item: any) {
+  var here2=this;
   this.count--;
   //console.log('onItemDeSelectAll', item);
 
   var index = this.selectedItems.findIndex(i=> i.item_text == item.item_text);
-  this.selectedItems.splice(index,1);
+  here2.selectedItems.splice(index,1);
 
-console.log(this.selectedItems);
+console.log(here2.selectedItems);
 
-  if(this.count==0){
-  this.isButtonVisible = false;
-  this.isButtonVisibleAI=false;
+  if(here2.count==0){
+    here2.isButtonVisible = false;
+    here2.isButtonVisibleAI=false;
 }
 
 } 
