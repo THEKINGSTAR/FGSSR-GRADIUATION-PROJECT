@@ -20,16 +20,16 @@ export class CommunicationComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
-      deacription: [null],
+      description: [null],
     });
 
-    this.contactForm.get("deacription").valueChanges.subscribe((f) => {
+    this.contactForm.get("description").valueChanges.subscribe((f) => {
       this.ondescriptionChanged(f);
     });
   }
 
   //Add project
-  deacriptions = [
+  descriptions = [
     "Social Media App Development",
     "E-commerce Website Development",
     "Data Visualization Dashboard Development",
@@ -190,18 +190,19 @@ export class CommunicationComponent implements OnInit {
   }
   submit() {
     if (
-      this.contactForm.value == undefined ||this.contactForm.value.deacription == undefined
+      this.contactForm.value == undefined ||this.contactForm.value.description == undefined
     ) {
       console.log(this.contactForm.value);
       alert("please select Project");
     } else {
+      console.log(this.contactForm.value);
       this.userData
         .CreateProject(
-          this.contactForm.value.deacription,
+          this.contactForm.value.description,
           this.JwtAuth.decodedToken.unique_name[0]
         )
         .subscribe(() => {
-          alert(this.contactForm.value.deacription + "  Add Successfully");
+          alert(this.contactForm.value.description + "  Add Successfully");
         });
     }
   }

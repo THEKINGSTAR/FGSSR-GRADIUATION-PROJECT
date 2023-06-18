@@ -8,7 +8,7 @@ namespace API.Entities
         public string TeamTag { get; set; }
         public int ProjectID { get; set; }
         public int TeamLeader { get; set; }
-        public string Deacription { get; set; }
+        public string Description { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
