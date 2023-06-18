@@ -1,20 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj": {}
+    "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj": {}
   },
   "projects": {
-    "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj": {
+    "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj",
+        "projectUniqueName": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Yehia\\.nuget\\packages\\",
-        "outputPath": "E:\\FGSSR Project\\FGSSR_final\\API\\obj\\",
+        "projectPath": "D:\\Project\\New3\\FGSSR_final\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\New3\\FGSSR_final\\API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Yehia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +29,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

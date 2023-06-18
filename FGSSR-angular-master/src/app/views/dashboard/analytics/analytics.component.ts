@@ -19,11 +19,10 @@ import { DataService } from "app/shared/services/data.service";
   animations: matxAnimations,
 })
 export class AnalyticsComponent implements OnInit, AfterViewInit {
- 
   sessionOptions: any;
   sessions: any;
   sessionsData: any;
-  teamNames: any;
+  teamNames: any = {};
   trafficGrowthChart: any;
   bounceRateGrowthChart: any;
 
@@ -47,8 +46,8 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {}
 
   ngOnInit() {
-   
-   
+    this.getTeamName();
+    this.getTasks();
   }
   TaskLink() {
     this.route.navigate(["/communication/Tasks"]);
@@ -68,26 +67,26 @@ export class AnalyticsComponent implements OnInit, AfterViewInit {
   ProjectLink() {
     this.route.navigate(["/communication/communication"]);
   }
- 
+
   getTeamName(): any {
     this.userData
       .getTeamName(this.jwtAuth.decodedToken.unique_name[0])
-      .subscribe((res) => {
-        if(res.values==null||res.values==undefined){
-           this.teamNames= 'No Team add';
-        }
-        else{
-          console.log('ed',res);
-          this.teamNames = res;
-        }
-        
+      .subscribe((res: any) => {
+        console.log("ed", res);
+        this.teamNames = res;
+        // if (res.values == null || res.values == undefined) {
+        //   this.teamNames = "No Team add";
+        // } else {
+        //   console.log("ed", res);
+        //   this.teamNames = res;
+        // }
       });
   }
 
   getTasks(): any {
     this.userData
       .getTeamTasks(this.jwtAuth.decodedToken.unique_name[0])
-      .subscribe((res1:any) => {
+      .subscribe((res1: any) => {
         console.log(res1);
         this.onGoingProjectList = res1;
       });
