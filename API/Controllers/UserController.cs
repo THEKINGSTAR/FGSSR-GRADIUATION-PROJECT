@@ -146,8 +146,17 @@ namespace API.Controllers
             }
             var team = await _userRepo.GetTeamName(id);
             projectDto.TeamName = team.TeamName;
-            var MaxProjectId = await _userRepo.GetMaxProjectId();
-            projectDto.ProjectID = MaxProjectId + 1;
+            var count = await _userRepo.GetProjectCount();
+            if (count > 0)
+            {
+                var MaxProjectId = await _userRepo.GetMaxProjectId();
+                projectDto.ProjectID = MaxProjectId + 1;
+            }
+            else
+            {
+                projectDto.ProjectID = 1;
+            }
+            projectDto.UserID = id;
             var Project = _mapper.Map<UserProject>(projectDto);
             _userRepo.Add(Project);
             if (await _userRepo.SaveAll())

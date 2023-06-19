@@ -53,7 +53,7 @@ namespace API.DTOs
         public int ProjectID { get; set; }
         public string Role { get; set; }
         public string TeamName { get; set; }
-        public string Deacription { get; set; }
+        public string Description { get; set; }
     }
     public class TaskDto
     {

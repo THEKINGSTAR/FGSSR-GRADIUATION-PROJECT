@@ -76,12 +76,17 @@ namespace API.Data
 
         public async Task<int> GetMaxProjectId()
         {
-            return await _context.UserProjects.MaxAsync(x => x.ProjectID);
+            return await _context.UserProjects.MaxAsync(x => (int?)x.ProjectID ?? 0);
         }
 
         public async Task<IEnumerable<object>> GetTeamTasks(int usercode)
         {
             return await _context.task.Where(x => x.UserID == usercode).ToListAsync();
+        }
+
+        public async Task<int> GetProjectCount()
+        {
+            return await _context.UserProjects.CountAsync();
         }
     }
 }
