@@ -1,0 +1,782 @@
+[
+    {
+        "title": "Social Media App Development",
+        "Requirements": "HTML  CSS JavaScript PHP or Python MySQL PostgreSQL React or Angular or Vue.js REST API",
+        "Domain": "Social Media",
+        "Description": "helps you successfully launch social media app with planning, feedback, and improvisation"
+    },
+    {
+        "title": "E-commerce Website Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL  PostgreSQL AJAX React Angular Vue.js REST API",
+        "Domain": "E-commerce",
+        "Description": "the process of executing the build plan for the backend and frontend of your ecommerce website. This includes your product pages, shopping cart, order form and support pages."
+    },
+    {
+        "title": "Natural Language Processing (NLP) Chatbot Development",
+        "Requirements": "Python Natural Language Processing (NLP) Machine Learning Deep Learning  Neural Networks Computer Vision",
+        "Domain": "AI",
+        "Description": "check common nouns and remove capitalization, so that they can recognize the user input accurately."
+    },
+    {
+        "title": "Data Visualization Dashboard Development",
+        "Requirements": "HTML CSS JavaScript Python D3.js Plotly Pandas Matplotlib",
+        "Domain": "Data Analytics",
+        "Description": " Explore AWS Cost-Effective Data Visualization Services to Visualize Data in Real Time"
+    },
+    {
+        "title": "Online Education Platform Development",
+        "Requirements": "HTML  CSS JavaScript PHP or Python MySQL PostgreSQL React Angular Vue.js REST API",
+        "Domain": "Education",
+        "Description": "The development of an e-learning platform poses the constraints relating to the development of websites but also presents certain specificities coming from its use "
+    },
+    {
+        "title": "IoT-based Smart Home Automation System",
+        "Requirements": "C Python Node.js Raspberry Pi Arduino MQTT HTTP  IoT platforms",
+        "Domain": "IoT",
+        "Description": "controlling, monitoring, and regulating devices in your home from a remote location"
+    },
+    {
+        "title": "Blockchain-based Voting System",
+        "Requirements": "Python Blockchain Smart Contracts Solidity Web3.js Ethereum",
+        "Domain": "Blockchain",
+        "Description": "software offers various avenues on desktop and mobile for increasing voter accessibility and saving time in the voting process"
+    },
+    {
+        "title": "E-commerce Platform Development",
+        "Requirements": "Python Django Flask (for backend) HTML CSS JavaScript (for frontend) PayPal (for payment processing) Stripe API (for payment processing)",
+        "Domain": "E-commerce",
+        "Description": "building the backend and frontend of your ecommerce website. This includes your product pages, shopping cart, order form and support pages. "
+    },
+    {
+        "title": "Social Media Analytics",
+        "Requirements": "Python Numpy Pandas",
+        "Domain": "Social Media",
+        "Description": "collecting data from social media sites and blogs and evaluating that data to make business decisions"
+    },
+    {
+        "title": "Natural Language Processing Chatbot",
+        "Requirements": "Python Natural Language Processing (NLP) Machine Learning Deep Learning Neural Networks",
+        "Domain": "AI",
+        "Description": "using natural language processing (NLP) to understand human language and respond appropriately"
+    },
+    {
+        "title": "IoT Home Automation System",
+        "Requirements": "C Python Node.js Raspberry Pi Arduino MQTT  HTTP",
+        "Domain": "IoT",
+        "Description": " home automation, see which sensors, IoT platforms, IoT frameworks, hardware, and building tools you should consider for your smart home solution"
+    },
+    {
+        "title": "Computer Vision-Based Security System",
+        "Requirements": "Python OpenCV Deep Learning Neural Networks",
+        "Domain": "Security",
+        "Description": "a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs"
+    },
+    {
+        "title": "Social Media Sentiment Analysis",
+        "Requirements": "Python Natural Language Processing (NLP) Machine Learning Deep Learning  Neural Networks Scikit-Learn Numpy Pandas Matplotlib",
+        "Domain": "Social Media",
+        "Description": "retrieving information about a consumer\u2019s perception of a product, service or brand"
+    },
+    {
+        "title": "Cloud-Based File Storage and Sharing System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL React or Angular Vue.js REST API AWS Azure",
+        "Domain": "Cloud Computing",
+        "Description": "Stores,shares and retrienes files to & from a cloud storage"
+    },
+    {
+        "title": "Healthcare AI Diagnosis System",
+        "Requirements": "Python Machine Learning Deep Learning Neural Networks  NLP",
+        "Domain": "Healthcare",
+        "Description": "Diagnoses and follows up on patients health conditions"
+    },
+    {
+        "title": "E-commerce Inventory Management",
+        "Requirements": "Python Django/Flask HTML CSS JavaScript REST API MySQL PostgreSQL Python",
+        "Domain": "E-commerce",
+        "Description": "the act of tracking the location, amount, pricing, and mix of inventory available from your business"
+    },
+    {
+        "title": "Digital Marketing Analytics",
+        "Requirements": "SQL Pandas Matplotlib Scikit-learn Django Flask",
+        "Domain": "Marketing",
+        "Description": "Data collection and analysis use for digital marketing"
+    },
+    {
+        "title": "Cybersecurity Monitoring Tool",
+        "Requirements": "Python Machine Learning Deep Learning Neural Networks Cybersecurity Cloud",
+        "Domain": "Cybersecurity",
+        "Description": "enable developers to detect and respond to security threats in real-time. CSM tools collect data from various sources, including network traffic, system event logs, and user activity. These tools then analyze the data for signs of suspicious or abnormal activity"
+    },
+    {
+        "title": "Virtual Personal Styling Assistant",
+        "Requirements": "Python Machine Learning Deep Learning NLP Computer Vision REST API",
+        "Domain": "Fashion",
+        "Description": "Makes virtual designs using artificial intelligence"
+    },
+    {
+        "title": "Cloud-Based HR Management System",
+        "Requirements": "Python Django/Flask HTML CSS JavaScript REST API AWS/Azure",
+        "Domain": "HR",
+        "Description": "Manages and improves the exploitatation of human resources"
+    },
+    {
+        "title": "3D Printing and Modeling",
+        "Requirements": "Python Blender CAD software 3D printing technologies",
+        "Domain": "Manufacturing",
+        "Description": "design & manufacture products using 3D printing technology"
+    },
+    {
+        "title": "Sports Analytics",
+        "Requirements": "Python SQL Pandas Matplotlib Scikit-learn Django Flask",
+        "Domain": "Sports Analytics",
+        "Description": "plugging statistics into mathematical models to predict the outcome of a given play or game"
+    },
+    {
+        "title": "Speech Recognition and Synthesis",
+        "Requirements": "Python Quantum Computing Quantum Mechanics",
+        "Domain": "Speech Recognition",
+        "Description": "artificial simulation of human speech with by a computer or other device. The counterpart of the voice recognition, speech synthesis is mostly used for translating text information into audio information and in applications such as voice-enabled services and mobile applications."
+    },
+    {
+        "title": "Quantum Computing",
+        "Requirements": "Python Quantum Computing Quantum Mechanics",
+        "Domain": "Computing",
+        "Description": "Denelops computer technology based on the application of the principles of quantum theory"
+    },
+    {
+        "title": "Digital Twin Technology",
+        "Requirements": "Python Machine Learning Deep Learning Cloud Computing IoT",
+        "Domain": "IoT",
+        "Description": "Makes a virtual model of a physical object and uses real-time data sent from sensors"
+    },
+    {
+        "title": "Environmental Monitoring System",
+        "Requirements": "Python Node.js Raspberry Pi Arduino MQTT HTTP IoT platforms",
+        "Domain": "Environmental",
+        "Description": "works on tools and techniques designed to monitor the environment,characterize its quality"
+    },
+    {
+        "title": "Natural Disaster Prediction",
+        "Requirements": "Python Machine Learning Deep Learning NLP Cloud Computing",
+        "Domain": "Disaster",
+        "Description": "looking for patterns in data to determine where and when natural disasters are likely to occur"
+    },
+    {
+        "title": "Cryptocurrency Trading Bot",
+        "Requirements": "Python Blockchain Cryptocurrency REST API",
+        "Domain": "Finance",
+        "Description": "A set of platform-specific scripts which can be programmed to trade for you"
+    },
+    {
+        "title": "Online Learning Platform",
+        "Requirements": "Python  Django (for web development) Flask (for web development) HTML CSS JavaScript (for frontend development) REST API SQL database NoSQL database Machine Learning (optional)",
+        "Domain": "Education",
+        "Description": "a webspace or portal for educational content and resources that offers a student everything they need in one place: lectures, resources, opportunities to meet and chat with other students, and more"
+    },
+    {
+        "title": "Autonomous Delivery Drones",
+        "Requirements": "Python Machine Learning Computer Vision Robotics IoT Cloud Computing",
+        "Domain": "Logistics",
+        "Description": "a drone delivering products as quickly possible and reduce costs"
+    },
+    {
+        "title": "Chatbot for Customer Support",
+        "Requirements": "Python  Natural Language Processing (NLP) Machine Learning REST API",
+        "Domain": "Customer Service",
+        "Description": "a conversational commerce tool that provides customer assistance via text chat, voice command or both"
+    },
+    {
+        "title": "AI-Powered Financial Advisor",
+        "Requirements": "Python Machine Learning Deep Learning Natural Language Processing (NLP) Financial Markets",
+        "Domain": "Finance",
+        "Description": "a virtual financial advisor powered by artificial intelligence (AI) that employs an algorithm to deliver an automated selection of financial advisory services."
+    },
+    {
+        "title": "Smart Home Automation System",
+        "Requirements": "Python IoT Raspberry Pi (for hardware programming) Arduino (for hardware programming) REST API Cloud Computing",
+        "Domain": "Home Automation",
+        "Description": "allow you to view and control the system with an Internet-connected device. It offers a wealth of information about your house, which could include anything from checking security system status to the current temperature in your house."
+    },
+    {
+        "title": "Digital Asset Management System",
+        "Requirements": "Python Django (for web development) Flask (for web development) HTML  CSS JavaScript (for frontend development) REST API SQL or NoSQL databases",
+        "Domain": "Digital Asset Management",
+        "Description": "Digital asset management system helps organizations organize store recover and share digital assets"
+    },
+    {
+        "title": "Automated Trading System",
+        "Requirements": "Python  Algorithmic Trading Machine Learning Deep Learning REST API",
+        "Domain": "Finance",
+        "Description": "a subset of algorithmic trading, uses a computer program to create buy and sell orders and automatically submits the orders to a market center or exchange."
+    },
+    {
+        "title": "Health and Wellness App",
+        "Requirements": "Python Django (for web development) Flask (for web development) HTML CSS JavaScript (for frontend development) REST API Machine Learning (optional)",
+        "Domain": "Health and Wellness",
+        "Description": "an application that can be downloaded on any mobile device and used anywhere to get fit. Fitness apps are designed to help with exercise, other types of physical training, nutrition and diet, and other ways to get fit"
+    },
+    {
+        "title": "Recommendation System",
+        "Requirements": "Python  Machine Learning  Deep Learning Natural Language Processing (NLP) Collaborative Filtering",
+        "Domain": "E-commerce",
+        "Description": "an artificial intelligence or AI algorithm, usually associated with machine learning, that uses Big Data to suggest or recommend additional products to consumers."
+    },
+    {
+        "title": "Smart Farming System",
+        "Requirements": "Python IoT Raspberry Pi (for hardware programming) Arduino (for hardware programming) REST API Cloud Computing",
+        "Domain": "Agriculture",
+        "Description": "a management concept focused on providing the agricultural industry with the infrastructure to leverage advanced technology \u2013 including big data, the cloud and the internet of things (IoT) \u2013 for tracking, monitoring, automating and analyzing operations."
+    },
+    {
+        "title": "E-learning Content Creation Tool",
+        "Requirements": "Python  Natural Language Processing (NLP)  Machine Learning REST API",
+        "Domain": "Education",
+        "Description": "enable instructional designers to build e-learning content. The tool allows you to create and manage your course, including the creation of every slide, video, and voiceover in it"
+    },
+    {
+        "title": "Social Network Analysis",
+        "Requirements": "Python  Network Analysis Graph Theory Data Visualization",
+        "Domain": "Social Media",
+        "Description": "the study of structure, and how it influences health, and it is based on theoretical constructs of sociology and mathematical foundations of graph theory"
+    },
+    {
+        "title": "Online Appointment Booking System",
+        "Requirements": "Python Django (for web development) Flask (for web development) HTML CSS JavaScript (for frontend development) REST API SQL database NoSQL database",
+        "Domain": "Healthcare",
+        "Description": "a type of digital solution that allows citizens to book, schedule, or cancel their appointments through web-based systems."
+    },
+    {
+        "title": "Event Management System",
+        "Requirements": "Python Django (for web development) Flask (for web development) HTML CSS JavaScript (for frontend development)  REST API SQL database NoSQL database",
+        "Domain": "Event Management",
+        "Description": "assist organizers with the planning, execution, and management of their events."
+    },
+    {
+        "title": "Smart Home Automation",
+        "Requirements": "Python Raspberry Pi Node.js MQTT IoT platforms",
+        "Domain": "IoT",
+        "Description": "a network of hardware, communication, and electronic interfaces that work to integrate everyday devices with one another via the Internet"
+    },
+    {
+        "title": "Online Food Delivery Platform",
+        "Requirements": "Python Flask Django HTML  CSS JavaScript REST API Payment Gateway Integration",
+        "Domain": "E-commerce",
+        "Description": "online business that acts as an intermediary between consumers and multiple food facilities to submit food orders from a consumer to a participating food facility, and to arrange for the delivery of the order from the food facility to the consumer."
+    },
+    {
+        "title": "Music Recommendation System",
+        "Requirements": "Python Machine Learning  Deep Learning Natural Language Processing (NLP) Pandas Matplotlib",
+        "Domain": "Entertainment",
+        "Description": "collect and analyze the data necessary to nominate the best music means for the people concerned"
+    },
+    {
+        "title": "Personal Finance Management Tool",
+        "Requirements": "Python Django or Flask HTML CSS JavaScript REST API SQL",
+        "Domain": "Finance",
+        "Description": "aggregate and view all your financial information on one platform and manage your cash flow better. "
+    },
+    {
+        "title": "Healthcare Chatbot",
+        "Requirements": "Python Machine Learning Deep Learning Natural Language Processing (NLP) REST API Cloud Computing",
+        "Domain": "Healthcare",
+        "Description": "AI-powered conversational solutions that help patients, insurance companies, and healthcare providers easily connect with each other."
+    },
+    {
+        "title": "Voice Assistant for Smart Homes",
+        "Requirements": "Python Raspberry Pi Node.js MQTT IoT platforms",
+        "Domain": "IoT",
+        "Description": "responds to your verbal commands to activate various smart appliances throughout your home"
+    },
+    {
+        "title": "E-learning Game Platform",
+        "Requirements": "Python Unity HTML CSS JavaScript REST API",
+        "Domain": "Education",
+        "Description": "an integrated set of interactive online services that provide trainers, learners, and others involved in education with information, tools, and resources to support and enhance education delivery and management"
+    },
+    {
+        "title": "News Recommendation System",
+        "Requirements": "Python Machine Learning Deep Learning Natural Language Processing (NLP) Pandas Matplotlib",
+        "Domain": "Media",
+        "Description": "rely on algorithms that provide users with personalised recommendations based on past data about interactions with news content"
+    },
+    {
+        "title": "Real Estate Property Management System",
+        "Requirements": "Python Django Flask  HTML CSS JavaScript REST API SQL",
+        "Domain": "Real Estate",
+        "Description": "centralizes the organization of accommodations businesses and residential properties by organizing and scheduling"
+    },
+    {
+        "title": "Renewable Energy Management System",
+        "Requirements": "Python Raspberry Pi Node.js MQTT IoT platforms",
+        "Domain": "Energy",
+        "Description": "focuses its energy use on alternative, renewable sources. This is done while actively monitoring energy assets to ensure they operate at peak"
+    },
+    {
+        "title": "Text-to-Speech and Speech-to-Text System",
+        "Requirements": "Python Deep Learning Natural Language Processing (NLP) Signal Processing",
+        "Domain": "Communication",
+        "Description": "It works to convert text into speech and convert speech into text taking into account spelling errors"
+    },
+    {
+        "title": "Language Translation Application",
+        "Requirements": "Python Machine Learning Deep Learning  Natural Language Processing (NLP) REST API",
+        "Domain": "Translation",
+        "Description": "makes it easy to translate individual words or entire sentences using your smartphone"
+    },
+    {
+        "title": "Online Gaming Platform",
+        "Requirements": "Python Django or Flask HTML CSS  JavaScript REST API SQL",
+        "Domain": "Gaming",
+        "Description": "allow users to play, stream, create, or discuss games"
+    },
+    {
+        "title": "Online Event Ticketing Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Event Management",
+        "Description": "a help desk software program used to process, manage, and track customer issues from submission to resolution. Ticketing systems automatically organize and prioritize support requests in a central dashboard. Users can tag, categorize, and assign tickets as they come in"
+    },
+    {
+        "title": "Online Travel Booking System",
+        "Requirements": "HTML CSS JavaScript PHP or Python MySQL or MongoDB REST API Payment Gateway Integration",
+        "Domain": "Travel and Tourism",
+        "Description": "a software solution and reservation system that makes it simple for guests to book and pay for your tours and activities online. Some of these systems also include reporting software for tour operators and other user-friendly tools that help you improve efficiencies and boost bookings."
+    },
+    {
+        "title": "Social Impact Assessment and Reporting Tool",
+        "Requirements": "HTML CSS JavaScript, PHP or Python MySQL or MongoDB REST API",
+        "Domain": "Social Responsibility",
+        "Description": "evaluate the potential impacts of a project, policy, program, or activity on various stakeholders and the environment. These tools can help identify and mitigate negative and maximize positive impacts and can be used at various stages of the project lifecycle."
+    },
+    {
+        "title": "Online Real Estate Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP or Python MySQL or MongoDB REST API Payment Gateway Integration",
+        "Domain": "Real Estate",
+        "Description": "an online platform that links clients with realtors, brokers, and property managers."
+    },
+    {
+        "title": "Online Voting System",
+        "Requirements": "HTML CSS avaScript,  PHP Python MySQL MongoDB REST API Blockchain Integration",
+        "Domain": "Governance",
+        "Description": "voting that uses electronic means to either aid or take care of casting and counting ballots. Depending on the particular implementation, e-voting may use standalone electronic voting machines (also called EVM) or computers connected to the Internet (online voting)"
+    },
+    {
+        "title": "Online Music Instrument Learning Platform",
+        "Requirements": "HTML CSS JavaScript PHP or Python MySQL or MongoDB REST API",
+        "Domain": "Music",
+        "Description": "Learn to play all musical instruments online in a simple and professional way"
+    },
+    {
+        "title": "Online Pet Store",
+        "Requirements": "HTML  CSS JavaScript PHP Python  MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Pet Care",
+        "Description": "sells animals and pet care resources to the public online. A variety of animal supplies and pet accessories are also sold in pet shops. The products sold include: food, treats, toys, collars, leashes, cat litter, cages and aquariums"
+    },
+    {
+        "title": "Online Trading Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Finance",
+        "Description": "allows investors and traders to position trades through financial intermediaries and to track accounts. Trading platforms also come bundled with other services, such as quotes in real-time, charting software, news feeds, and even premium analysis."
+    },
+    {
+        "title": "Online Language Translation Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Translation",
+        "Description": "convert written material from one or more 'source languages' into the 'target language', making sure that the translated version conveys the meaning of the original as clearly as possible."
+    },
+    {
+        "title": "Restaurant Ordering and Reservation System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB  REST API Payment Gateway Integration",
+        "Domain": "Food and Beverage",
+        "Description": "lets customers reserve a table while restaurateurs oversee bookings, cancellations, and no-shows. may also offer waitlist tools, visual table management features or allow you to handle digital pre-payments."
+    },
+    {
+        "title": "Online Medical Appointment Scheduling System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Healthcare",
+        "Description": "provides the platform to facilitate the booking and management of patients' appointment bookings"
+    },
+    {
+        "title": "Online Travel Guide and Trip Planning Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Google Maps API Integration",
+        "Domain": "Travel and Tourism",
+        "Description": "reserve & review touristic places"
+    },
+    {
+        "title": "Personalized News Aggregator",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "News and Media",
+        "Description": "The system collects news from HTML and RSS Web documents, organizes them according to pre-defined news categories and constructs personalized views via a Web-based interface."
+    },
+    {
+        "title": "Online Dating Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Social Networking",
+        "Description": "find, talk to & plan to meet your soulmate online"
+    },
+    {
+        "title": "Online Marketplace for Handmade Crafts",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Art and Design",
+        "Description": "compare between the shapes, quality & prices, then buy your favorite Handmade Crafts online"
+    },
+    {
+        "title": "Social Network Analysis and Visualization",
+        "Requirements": "Python NetworkX Gephi Data Visualization Libraries",
+        "Domain": "Data Analysis",
+        "Description": "understand society and its structures by importing data (usually from social media platforms) into a visualization software"
+    },
+    {
+        "title": "Online Auction Website Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "E-commerce",
+        "Description": "buy your preferred item with your suitable amount of money & get it delivered to you online"
+    },
+    {
+        "title": "Online Grocery Delivery Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Food and Beverage",
+        "Description": "directly buy fresh food staffs or produce from a seller over the internet"
+    },
+    {
+        "title": "Online Marketplace for Freelancers",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Freelancing",
+        "Description": "online platforms for companies to meet and engage with freelancers who are looking to offer their services. "
+    },
+    {
+        "title": "Movie Recommendation Engine",
+        "Requirements": "Python Machine Learning Libraries Flask Framework",
+        "Domain": "Entertainment",
+        "Description": "a Machine Learning-based approach to filtering or predicting the users' film preferences based on their past choices and behavior."
+    },
+    {
+        "title": "Online Language Learning Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Education",
+        "Description": "learn your preferred language according to your preferred level & learning rate"
+    },
+    {
+        "title": "Online Course Booking System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Education",
+        "Description": "find your preferred course with suitable billing option"
+    },
+    {
+        "title": "Online Art Portfolio and Showcase",
+        "Requirements": "HTML CSS JavaScript PHP or Python MySQL or MongoDB REST API",
+        "Domain": "Art and Design",
+        "Description": "an online representation of work you have created, as well as your skills and experiences"
+    },
+    {
+        "title": "E-learning Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL LMS Framework REST API",
+        "Domain": "Education",
+        "Description": "a software that is designed specifically to create, distribute, and manage the delivery of educational content"
+    },
+    {
+        "title": "Online Bookstore Website Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "E-commerce",
+        "Description": "see summaries & buy books according to your preferences"
+    },
+    {
+        "title": "Online Donation Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Non-profit",
+        "Description": "a website that allows nonprofits to accept and process online donations"
+    },
+    {
+        "title": "Mental Health Chatbot Development",
+        "Requirements": "Python Natural Language Processing Libraries Flask Framework",
+        "Domain": "Healthcare",
+        "Description": "a type of Artificial Intelligence (AI) that are designed to help you with your mental health."
+    },
+    {
+        "title": "Music Streaming Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Entertainment",
+        "Description": "a type of streaming media service that focuses primarily on music, and sometimes other forms of digital audio content such as podcasts"
+    },
+    {
+        "title": "Cryptocurrency Exchange Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Finance",
+        "Description": "a business that allows customers to trade cryptocurrencies or digital currencies for other assets, such as conventional fiat money or other digital currencies"
+    },
+    {
+        "title": "Online Job Portal Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Recruitment",
+        "Description": "find your future job according to your portfolio & preferences"
+    },
+    {
+        "title": "Restaurant Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL REST API",
+        "Domain": "Food and Beverage",
+        "Description": "watch over your employees &  track your restaurant reputation & reviews online"
+    },
+    {
+        "title": "Recipe Sharing Website Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Food and Beverage",
+        "Description": "share your favorite recipes with your network"
+    },
+    {
+        "title": "Online Art Gallery and Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Art and Design",
+        "Description": "displaying the artwork being to promote it to potential buyers"
+    },
+    {
+        "title": "Online Marketplace for Handmade Goods",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "E-commerce",
+        "Description": "compare between the shapes, quality & prices, then buy your favorite Handmade goods online"
+    },
+    {
+        "title": "Online Home Rental Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Real Estate",
+        "Description": "a service in which customers arrive to request the hiring of their homes"
+    },
+    {
+        "title": "Online Ticket Booking System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL REST API Payment Gateway Integration",
+        "Domain": "Entertainment",
+        "Description": "allows potential guests to self-book and pay through your website, and other channels, while giving you the best tools to run and scale your operation"
+    },
+    {
+        "title": "Personal Finance Management Web Application",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Finance",
+        "Description": "lets users categorize transactions and add accounts from multiple institutions into a single view, also includes data visualization"
+    },
+    {
+        "title": "Online Gaming Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Gaming",
+        "Description": "allow users to play, stream, create, or discuss games"
+    },
+    {
+        "title": "Online Therapy Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL Video Conferencing API REST API",
+        "Domain": "Healthcare",
+        "Description": "offers easy access to mental health services via phone, messaging, or video sessions"
+    },
+    {
+        "title": "Online Event Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Event Management",
+        "Description": "allows the user to select from a list of event types, then allows the user to select the date and time of event, place and the event equipment's"
+    },
+    {
+        "title": "Online Auction System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "E-commerce",
+        "Description": "buy your preferred item with your suitable amount of money & get it delivered to you online"
+    },
+    {
+        "title": "Online Rental Marketplace Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Rental Marketplace",
+        "Description": "where individuals or companies list vacant properties for rentals"
+    },
+    {
+        "title": "Online Learning Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL LMS Framework REST API",
+        "Domain": "Education",
+        "Description": "web-based technology used to plan, implement and assess a specific learning process"
+    },
+    {
+        "title": "Chatbot Development for Customer Support",
+        "Requirements": "Dialogflow Wit.ai IBM Watson Node.js Python REST API Integration with messaging platforms (e.g. Facebook Messenger, Slack)",
+        "Domain": "Customer Service",
+        "Description": "uses artificial intelligence (AI), machine learning, and natural language understanding (NLU) to mimic human speech"
+    },
+    {
+        "title": "Online Food Ordering and Delivery System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Food Delivery",
+        "Description": "allows your business to accept and manage orders placed online for delivery or takeaway"
+    },
+    {
+        "title": "Car Rental System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL PostgreSQL REST API Integration with Google Maps API",
+        "Domain": "Car Rental",
+        "Description": "rent your favorite car & view other rentable cars online"
+    },
+    {
+        "title": "Job Board Website Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Integration with Job Search APIs (e.g. Indeed, Glassdoor)",
+        "Domain": "Employment",
+        "Description": "a website used by employers to advertise their job vacancies to job seekers"
+    },
+    {
+        "title": "Weather Forecasting Application Development",
+        "Requirements": "React Angular Vue.js Node.js Python REST API Integration with Weather APIs (e.g. OpenWeatherMap, AccuWeather)",
+        "Domain": "Weather",
+        "Description": "Prediction of the weather through application of the principles of physics and meteorology"
+    },
+    {
+        "title": "Chatbot Development",
+        "Requirements": "Python NLTK Dialogflow IBM Watson",
+        "Domain": "Artificial Intelligence",
+        "Description": "a computer program that uses artificial intelligence (AI) and natural language processing (NLP) to understand customer questions and automate responses to them, simulating human conversation"
+    },
+    {
+        "title": "Online Fitness Training Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Fitness Tracking API Integration",
+        "Domain": "Health and Fitness",
+        "Description": "enables you to work virtually with a fitness professional to help you reach your fitness goals"
+    },
+    {
+        "title": "Job Search and Recruitment Platform Development",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Recruitment",
+        "Description": "market your jobs and your company so that you can attract candidates and convert them into applicants and new hires"
+    },
+    {
+        "title": "Online Legal Services Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Legal Services",
+        "Description": "an online platform that makes it easier to secure legal talent and hire professionals on a temporary or permanent basis for your needs."
+    },
+    {
+        "title": "E-commerce Marketplace for Second-hand Goods",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Marketplace",
+        "Description": "previously used devices, sold for less than the retail price"
+    },
+    {
+        "title": "Online Mental Health Support Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Mental Health",
+        "Description": "help in managing stress in your daily life by letting you keep track of stress levels. They also suggest techniques to cope with your stress and anxiety"
+    },
+    {
+        "title": "Social Network for Freelancers and Clients",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Freelance",
+        "Description": "a marketplace where employers and employees are able to find each other. The site allows employers to post work for site members who place bids in a competitive tender process"
+    },
+    {
+        "title": "Online Language Exchange Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Language",
+        "Description": "learn your preferred language and teach the language you're fluent in through online meetings"
+    },
+    {
+        "title": "Online Gift and Flower Delivery Service",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Gift and Flowers",
+        "Description": "allow consumers to browse online catalogues of flowers. They are often delivered to a third party, the recipient of the gift"
+    },
+    {
+        "title": "Online Bookstore and Reading Recommendation System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Books and Literature",
+        "Description": "suggests similar items to a purchaser based on his/her earlier purchases or preferences."
+    },
+    {
+        "title": "Online Course Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Education",
+        "Description": "offers you access to its pre-existing customer base and gives you a head start with marketing, usually at the cost of a percentage of your sales"
+    },
+    {
+        "title": "Online Movie and TV Show Streaming Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Entertainment",
+        "Description": "an on-demand online entertainment source for TV shows, movies and other streaming media"
+    },
+    {
+        "title": "Online Beauty and Personal Care Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Beauty and Personal Care",
+        "Description": "the buying and selling of beauty and personal care products through digital channels such as websites, mobile apps, and social media platforms"
+    },
+    {
+        "title": "Online Language Interpretation and Translation Tool",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Translation",
+        "Description": "convert written material from one or more 'source languages' into the 'target language', making sure that the translated version conveys the meaning of the original as clearly as possible"
+    },
+    {
+        "title": "Online Graphic Design Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Art and Design",
+        "Description": "defining requirements, visualizing and creating graphics including illustrations, logos, layouts and photos."
+    },
+    {
+        "title": "Online Coupon and Discount Aggregator",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Retail",
+        "Description": "discounts, offers and promotions offered by an online store to current or prospective customers"
+    },
+    {
+        "title": "Online Childcare and Babysitting Service",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Childcare",
+        "Description": "entertains a child with appropriate activities via video calls when in-person babysitting isn't an option"
+    },
+    {
+        "title": "Online Pet Adoption and Care Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Pets and Animals",
+        "Description": "buy & sell your favorite animal online"
+    },
+    {
+        "title": "Online Recipe and Meal Planning Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Food and Cooking",
+        "Description": "increased food variety, better adherence to nutrition guidelines, and successful weight management"
+    },
+    {
+        "title": "Online Personal Finance Management Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Finance",
+        "Description": "software that helps users manage their money. lets users categorize transactions and add accounts from multiple institutions into a single view. includes data visualizations"
+    },
+    {
+        "title": "Online Interior Design and Home Decor Service",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Home Decor",
+        "Description": "meet with clients, answer questions about interior design for their home or commercial building, and use design software or rendering applications to develop project ideas for client spaces online"
+    },
+    {
+        "title": "Online Volunteer Management System",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Non-profit",
+        "Description": "helps effective volunteer management. The systems support the recruitment of volunteers, communicate and co-ordinate with volunteers, work out a schedule for volunteers"
+    },
+    {
+        "title": "Online Task Management and Collaboration Tool",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Productivity",
+        "Description": "allows people to work together remotely over the internet"
+    },
+    {
+        "title": "Online Music Streaming Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API",
+        "Domain": "Music",
+        "Description": "a type of streaming media service that focuses primarily on music, and sometimes other forms of digital audio content such as podcasts"
+    },
+    {
+        "title": "Online Personal Styling and Fashion Service",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Fashion",
+        "Description": "helps clients define their \u201cpersonal style.\u201d Stylists accomplish this goal by selecting clothing and accessories that flatter the client, fit their budget, and suit their tastes"
+    },
+    {
+        "title": "Online Plant and Gardening Marketplace",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Gardening",
+        "Description": "buy & sell your preferred plants online"
+    },
+    {
+        "title": "Online Event Planning and Management Platform",
+        "Requirements": "HTML CSS JavaScript PHP Python MySQL MongoDB REST API Payment Gateway Integration",
+        "Domain": "Events",
+        "Description": "a flexible and interactive software solution that provides event organizers with customizable tools to create and host virtual meetings, conferences, and other types of events"
+    }
+]
