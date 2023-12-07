@@ -5056,26 +5056,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yehia\\.nuget\\packages\\": {}
+    "C:\\Users\\KING\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\KING\\git\\FGSSR-angular-master\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "E:\\FGSSR Project\\FGSSR_final\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Yehia\\.nuget\\packages\\",
-      "outputPath": "E:\\FGSSR Project\\FGSSR_final\\API\\obj\\",
+      "projectPath": "C:\\Users\\KING\\git\\FGSSR-angular-master\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\KING\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KING\\git\\FGSSR-angular-master\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Yehia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\KING\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5156,7 +5155,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

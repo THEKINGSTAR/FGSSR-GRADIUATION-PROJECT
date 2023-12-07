@@ -1,0 +1,60 @@
+<mat-card class="p-0">
+  <mat-card-title class="">
+    <div class="card-title-text">Create Team</div>
+    <mat-divider></mat-divider>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-horizontal-stepper [linear]="true">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out our Team Name</ng-template>
+          <mat-form-field class="pt-16 pb-16">
+            <input matInput placeholder="Team Name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out our Team Tag</ng-template>
+          <mat-form-field class="pt-16 pb-16">
+            <input matInput placeholder="Team Tag" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div fxLayout="row">
+            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+            <span fxFlex="8px"></span>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="ThirdFormGroup">
+        <form [formGroup]="ThirdFormGroup">
+          <ng-template matStepLabel>Fill out Team Description</ng-template>
+          <mat-form-field class="pt-16 pb-16">
+            <input matInput placeholder="Description" formControlName="ThirdCtrl" required>
+          </mat-form-field>
+          <div fxLayout="row">
+            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+            <span fxFlex="8px"></span>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div>
+          <mat-icon class="pt-16" [style.fontSize]="'36px'">check</mat-icon>
+        </div>
+        <div class="pb-16 mb-16"> You Are Done.</div>
+        <div fxLayout="row">
+          <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+          <span fxFlex="8px"></span>
+          <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-card-content>
+</mat-card>
+

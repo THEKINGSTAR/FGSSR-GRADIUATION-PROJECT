@@ -1,3 +1,0 @@
-For Install Ionic in angular project
-1.npm install --save @ionic/angular 
-2.npm start
